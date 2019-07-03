@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+      html,body {
+          background-color: #ffffff;
+          text-align: center;
+          border: 0px;
+          padding: 0px;
+          margin: 0px;
+      }
+      canvas {
+          border:           0px none;  /* no border, otherwise mouse coords will be wrong */
+          padding:          0px;       /* no padding, otherwise mouse coords will be wrong */
+          width:            100vw;     /* be as wide as possible */
+          height:           100vh;     /* be as tall as possible */
+          max-height:       100vh;     /* don't grow more than screen height */
+          display:          block;
+          overflow:         hidden;
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <script src="dat.gui.min.js"></script>
+    <canvas id="bezier-canvas" width="1000" height="500"></canvas>
+    <script src="bezier.js"></script>
+
+
+    <script>
+      canvas = document.getElementById("bezier-canvas");
+      ctx = canvas.getContext("2d");
+
+	  canvas.onmousedown = DragStart;
+	  canvas.onmousemove = Dragging;
+	  canvas.onmouseup   = DragEnd;
+	  canvas.onmouseout  = DragEnd;
+
+      DeCasteljau = true;
+
+      gui = new dat.GUI();
+      gui.add(this, 't', 0.0, 1.0).onChange(DrawCanvas);
+
+      curves = [];
+	  curves.push( [ [40,300], [200,100], [300,250] ] );
+      curves.push( [ [500,350], [580,200], [700,170], [850,400] ] );
+
+	  DrawCanvas();
+    </script>
+
+  </body>
+
+</html>
