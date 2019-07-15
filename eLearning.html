@@ -24,6 +24,7 @@
 	<!-- Setup code formatting with highlight.js -->
 	<link rel="stylesheet" href="./revealSlides/mb-plugins/highlight/xcode.css">
 
+
     <!-- color picker for whiteboard plugin -->
     <script src="./revealSlides/piklor.js/src/piklor.js"></script>
 
@@ -901,7 +902,7 @@ printf(&quot;pi = %f\n&quot;, pi);</code></pre>
 </section>
 <section id="d-modelle" class="slide level1">
 <h1>3D-Modelle</h1>
-<p><figure class="" style="width:800px;height:600px;"><iframe  data-src="demos/mview/mview.html?model=../../data/amo.off"class="" style="width:800px;height:600px;"></iframe><figcaption>Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren</figcaption></figure></p>
+<p><figure class="" style="width:800px;height:600px;"><iframe  data-src="revealSlides/mview/mview.html?model=../../data/amo.off"class="" style="width:800px;height:600px;"></iframe><figcaption>Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren</figcaption></figure></p>
 </section>
 <section id="interaktive-3d-applikationen" class="slide level1">
 <h1>Interaktive 3D-Applikationen</h1>
@@ -1570,8 +1571,7 @@ Supermario <img class="" style="height:100px;" src="data/supermario.png" style="
       // use local mathjax installation, use CommonHTML
       // temporarily avoid CommonHTML due to Chrome bug
       math: { 
-        mathjax: './revealSlides/MathJax/MathJax.js', 
-        config:   'TeX-AMS_HTML-full' 
+        mathjax: './revealSlides/MathJax/MathJax.js'
       },
 
 
@@ -1630,6 +1630,7 @@ Supermario <img class="" style="height:100px;" src="data/supermario.png" style="
       40: function() { Reveal.next(); },                       // up:   next slide
       38: function() { Reveal.prev(); },                       // down: prev slide
       },
+
 
 
       // load plugins
