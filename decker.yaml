@@ -1,0 +1,11 @@
+width:       1280
+height:      800
+mario:       true
+highlightjs: xcode
+exclude-directories:
+- code
+- log
+- public
+static-resource-dirs:
+- data
+- demos
