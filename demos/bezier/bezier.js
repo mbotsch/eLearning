@@ -25,7 +25,7 @@ var radius = 10;
 
 var dragPoint=null, mousePoint;
 
-var canvas, ctx;
+var canvas, ctx, canvasScale, viewScale, targetWidth;
 var gui = null;
 
 // should we draw control poly and deCasteljau steps?
@@ -174,13 +174,21 @@ function drawCurve(p)
 function DrawCanvas()
 {
     // resize to current css dimensions
-    if (canvas.width != canvas.clientWidth)
-        canvas.width  = canvas.clientWidth;
-    if (canvas.height != canvas.clientHeight)
-        canvas.height = canvas.clientHeight;
+    var w = canvasScale * canvas.clientWidth;
+    var h = canvasScale * canvas.clientHeight;
+    if (canvas.width  != w || canvas.height != h)
+    {
+        canvas.width  = w;
+        canvas.height = h;
+        ctx.scale(canvasScale, canvasScale);
+    }
 
     // clear canvas
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx.clearRect(0, 0, canvas.width/canvasScale, canvas.height/canvasScale);
+
+    // scale viewport
+    viewScale = canvas.clientWidth / targetWidth;
+    ctx.scale(viewScale, viewScale);
 
 	// line style defaults
 	ctx.lineCap  = "round";
@@ -190,13 +198,17 @@ function DrawCanvas()
     {
         drawCurve(curves[c]);
     }
+
+    // restore view scaling
+    ctx.scale(1.0/viewScale, 1.0/viewScale);
 }
 
 
 // start dragging
-function DragStart(e)
+function DragStart(evt)
 {
-	e = MousePos(e);
+    //evt.preventDefault();
+	var p = MousePos(evt);
 	var dx, dy;
 
     for (var c=0; c<curves.length; c++)
@@ -204,29 +216,31 @@ function DragStart(e)
         var points = curves[c];
         for (var i=0; i<points.length; i++)
         {
-		    dx = points[i][0] - e.x;
-		    dy = points[i][1] - e.y;
+		    dx = points[i][0] - p.x;
+		    dy = points[i][1] - p.y;
 		    if ((dx * dx) + (dy * dy) < radius*radius)
             {
                 dragPoint = points[i];
-			    mousePoint = e;
+			    mousePoint = p;
 			    canvas.style.cursor = "move";
 			    return;
 		    }
         }
 	}
+
 }
 
 
 // dragging
-function Dragging(e)
+function Dragging(evt)
 {
 	if (dragPoint)
     {
-		e = MousePos(e);
-		dragPoint[0] += e.x - mousePoint.x;
-		dragPoint[1] += e.y - mousePoint.y;
-		mousePoint = e;
+        //evt.preventDefault();
+		var p = MousePos(evt);
+		dragPoint[0] += p.x - mousePoint.x;
+		dragPoint[1] += p.y - mousePoint.y;
+		mousePoint = p;
         enforceContinuity();
 		DrawCanvas();
 	}
@@ -234,8 +248,9 @@ function Dragging(e)
 
 
 // end dragging
-function DragEnd(e)
+function DragEnd(evt)
 {
+    //evt.preventDefault();
 	dragPoint = null;
 	canvas.style.cursor = "default";
 	DrawCanvas();
@@ -245,11 +260,9 @@ function DragEnd(e)
 // get position of mouse cursor
 function MousePos(event)
 {
-	event = (event ? event : window.event);
-    var rect = canvas.getBoundingClientRect();
-    return {
-        x: (event.clientX - rect.left) / (rect.right - rect.left) * canvas.width,
-        y: (event.clientY - rect.top) / (rect.bottom - rect.top) * canvas.height
+    return { 
+        x: event.offsetX / viewScale, 
+        y: event.offsetY / viewScale 
     };
 }
 
@@ -270,6 +283,15 @@ function KeyDown(event)
         {
             continuity = event.keyCode-48;
             enforceContinuity();
+            break;
+        }
+
+        case 70: // F
+        {
+            if (document.fullscreenElement)
+                document.exitFullscreen();
+            else 
+                document.getElementById('body').requestFullscreen();
             break;
         }
     }
