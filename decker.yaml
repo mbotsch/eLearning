@@ -1,11 +1,34 @@
-width:       1280
-height:      800
-mario:       true
-highlightjs: xcode
+mario:                true
+menu:                 true
+highlightjs:          xcode
+
+pdfSeparateFragments: true
+controls:             false
+progress:             false
+slideNumber:          true
+history:              true
+keyboard:             true
+overview:             true
+center:               false
+touch:                true
+loop:                 false
+fragments:            true
+help:                 true
+transition:           'none'
+viewDistance:         2
+width:                1280
+height:               800
+minScale:             0.2
+maxScale:             5
+hideInactiveCursor:   true
+hideCursorTime:       3000
+checkOverflow:        true
+
 exclude-directories:
 - code
 - log
 - public
+
 static-resource-dirs:
 - data
 - demos

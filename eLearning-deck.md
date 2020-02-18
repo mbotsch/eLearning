@@ -105,12 +105,21 @@ height:      800
 # Bilder und Videos
 
 ::: col50
-![Bild-Caption](data/arcarde.png){ height=400px .fragment }
+![Bild-Caption](data/arcarde.png){ height=400px }
 :::
 
 ::: col50
-![Video-Caption](data/donkeykong.mp4){ height=400px .controls .autoplay .fragment }
+![Video-Caption](data/donkeykong.mp4){ height=400px .controls .autoplay }
 :::
+
+
+
+# Bild-Sequenzen
+
+![](data/laserMario1.jpg){ width=500px .fragment .sequence }
+![](data/laserMario2.jpg){ width=500px .fragment .sequence }
+![](data/laserMario3.jpg){ width=500px .fragment .sequence }
+![](data/laserMario4.jpg){ width=500px .fragment .sequence }
 
 
 
