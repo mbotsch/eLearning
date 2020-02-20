@@ -88,17 +88,34 @@ height:      800
 
 # Task-Listen
 
-::: col50
-- Marios Aufgabenliste
-    - [X] über Fässer springen
-    - [X] Leitern hochklettern
-    - [X] Donkey Kong verhauen
-    - [ ] Prinzessin retten
+::: {.col50 .left}
+- Was ist abgehakt?
+    - [X] Mathe
+    - [X] Informatik
+    - [ ] alles andere
 :::
 
-::: col50
-![](data/other-castle.png){ width=500px }
+::: {.col50 .left .thumb}
+- Was ist cool?
+    - [X] Mathe
+    - [X] Informatik
+    - [ ] alles andere
 :::
+
+::: {.col50 .left .check-cross}
+- Was können wir?
+    - [X] Mathe
+    - [X] Informatik
+    - [ ] alles andere
+:::
+
+::: {.col50 .left .plus-minus}
+- Stärken/Schwächen?
+    - [X] Mathe
+    - [X] Informatik
+    - [ ] alles andere
+:::
+
 
 
 
