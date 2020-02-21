@@ -196,13 +196,14 @@ printf("pi = %f\n", pi);
 |                     | Powerpoint | LaTeX-Beamer | HTML-Folien |
 |---------------------|:----------:|:------------:|:-----------:|
 | plattformunabhängig |     😢     |      😊      |      😊     |
-| Versionsverwaltung  |     😢     |      😊      |      😊     |
 | Mathe-Formelsatz    |     😢     |      😊      |      😊     |
 | Videos              |     😊     |      😢      |      😊     |
 | Studi-Export        |     😢     |      😢      |      😍     |
 | erweiterbar         |     😢     |      😢      |      😍     |
 | interaktiv          |     😢     |      😢      |      😍     |
 | Aufwand             |     😊     |      😢      |      😭     |
+
+Table: Warum sind HTML-Folien so toll?
 
 
 
