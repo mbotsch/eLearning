@@ -162,8 +162,7 @@ height:      800
 # Source Code mit [highlight.js](https://highlightjs.org/)
 
 ::: col50
-Quicksort in Haskell\
-``` haskell
+``` {.haskell .line-numbers caption="Quicksort in Haskell"}
 qsort []     = []
 qsort (x:xs) = qsort small ++ mid ++ qsort large
   where
@@ -174,8 +173,7 @@ qsort (x:xs) = qsort small ++ mid ++ qsort large
 :::
 
 ::: col50
-$\pi$ ausrechnen in C++\
-``` cpp
+``` {.cpp line-numbers="5-10" caption="$\pi$ ausrechnen in C++"}
 int     i, N=100000000;
 double  x, dx=1.0/(double)N;
 double  f, pi=0.0;
