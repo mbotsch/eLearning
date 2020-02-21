@@ -1,28 +1,20 @@
 mario:                true
 menu:                 true
 highlightjs:          xcode
+checkOverflow:        true
 
 pdfSeparateFragments: true
-controls:             false
-progress:             false
-slideNumber:          true
-history:              true
-keyboard:             true
-overview:             true
-center:               false
-touch:                true
-loop:                 false
-fragments:            true
-help:                 true
+controls:             0
+progress:             0
+slideNumber:          1
+history:              1
+center:               0
 transition:           'none'
 viewDistance:         2
 width:                1280
 height:               800
 minScale:             0.2
 maxScale:             5
-hideInactiveCursor:   true
-hideCursorTime:       3000
-checkOverflow:        true
 
 exclude-directories:
 - code
