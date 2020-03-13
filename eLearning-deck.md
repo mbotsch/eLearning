@@ -148,13 +148,13 @@ height:      800
 
 # Animierte Vektorgrafiken
 
-![de Casteljau Algorithmus](data/deCasteljau.svg){#svg width=800px}
+![de Casteljau Algorithmus](data/deCasteljau.svg){.embed width=800px}
 
 
 
 # Webseiten
 
-![](https://graphics.uni-bielefeld.de){ #demo width=800px height=600px }
+![](https://graphics.uni-bielefeld.de/){ .iframe width=800px height=600px }
 
 
 
