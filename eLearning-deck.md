@@ -89,7 +89,7 @@ height:      800
 # Task-Listen
 
 ::: {.col50 .left}
-- Was ist abgehakt?
+- Was ist "gecheck(box)ed"?
     - [X] Mathe
     - [X] Informatik
     - [ ] alles andere
@@ -154,7 +154,7 @@ height:      800
 
 # Webseiten
 
-![](https://graphics.uni-bielefeld.de/){ .iframe width=800px height=600px }
+![](https://graphics.uni-bielefeld.de/index.html){ width=800px height=600px }
 
 
 
@@ -421,7 +421,7 @@ Wer bekommt am Ende die Prinzessin?
 
 # Von Markdown zu HTML
 
-![](data/pipeline.svg){ #svg }
+![](data/pipeline.svg){ .embed }
 
 
 

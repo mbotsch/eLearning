@@ -16,6 +16,10 @@ height:               800
 minScale:             0.2
 maxScale:             5
 
+#decker:
+    #filter:
+        #border: true
+
 exclude-directories:
 - code
 - log
