@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+<body>
+
+<div id="vshader" class="editor">#version 300 es
+
+in vec4 v_position;
+in vec3 v_normal;
+in vec2 v_texcoord;
+
+out vec3 f_normal;
+out vec3 f_light;
+out vec2 f_texcoord;
+
+uniform mat4 modelview_projection_matrix;
+uniform mat4 modelview_matrix;
+uniform mat3 normal_matrix;
+uniform vec4 light_position;
+
+void main()
+{
+    // transform normal to eye coordinates
+    f_normal = normalize(normal_matrix * v_normal);
+
+    // direction to light source
+    f_light = normalize(vec3(-1,1,4));
+
+    // pass through texture coordinate
+    f_texcoord = v_texcoord;
+
+    // transform vertex by modelview and projection matrix
+    gl_Position = modelview_projection_matrix * v_position;
+}
+</div>
+
+
+<div id="fshader" class="editor">#version 300 es
+precision highp float;
+
+in vec3 f_normal;
+in vec2 f_texcoord;
+in vec3 f_light;
+
+out vec4 fragColor;
+
+uniform sampler2D alpha_map;
+
+void main()
+{
+    // transform vectors
+    vec3 N = normalize(f_normal);
+    vec3 L = normalize(f_light);
+
+    // get color/alpha from texture
+    vec4 color = texture(alpha_map, f_texcoord.st);
+
+    // remove transparent pixels
+    if (color.a < 0.5) discard;
+
+    // backfaces should be red
+    if (N.z<0.0) color = vec4(0.3, 0.0, 0.0, 1.0);
+
+    // diffuse lighting
+    color *= abs(dot(N,L));
+
+    fragColor = vec4(color.rgb, 1.0);
+ }
+</div>
+
+<canvas id="webgl_canvas">
+    If you see this, your browser does not support HTML5.
+</canvas>
+
+
+<script>
+    var texImage = "alpha-map.png";
+</script>
+
+<script src="ace/ace.js"></script>
+<script src="gl-matrix.js"></script>
+<script src="shader.js"></script>
+<script src="sphere.js"></script>
+<script src="texture.js"></script>
+<script src="demo.js"></script>
+
+  </body>
+</html>

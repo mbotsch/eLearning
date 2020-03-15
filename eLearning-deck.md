@@ -1,10 +1,11 @@
 ---
-title:       Probieren hilft beim Studieren
-subtitle:    Interaktive Vorlesungsfolien im Webbrowser
-author:      Mario Botsch
-affiliation: Universität Bielefeld
-width:       1280
-height:      800
+title:        Probieren hilft beim Studieren
+subtitle:     Interaktive Vorlesungsfolien im Webbrowser
+author:       Mario Botsch
+affiliation:  Universität Bielefeld
+bibliography: bibliography.bib
+width:        1280
+height:       800
 ...
 
 
@@ -27,6 +28,18 @@ height:      800
 # Features der HTML-Folien {.section}
 
 --------------------------------------------------------------------------------
+
+
+# Bilder und Videos
+
+::: col50
+![Bild-Caption](data/arcarde.png){ height=400px }
+:::
+
+::: col50
+![Video-Caption](data/donkeykong.mp4){ height=400px .controls .autoplay }
+:::
+
 
 
 # Aufzählungen
@@ -118,51 +131,47 @@ height:      800
 
 
 
+# Mathe-Formeln mit [MathJax](https://www.mathjax.org/)
 
-# Bilder und Videos
+- Navier-Stokes-Gleichungen
+  $$\begin{eqnarray}
+    \dot{\vec{u}} &=& -\vec{u}\cdot\grad\vec{u}
+    \;-\; \frac{1}{\rho}\grad p
+    \;+\; \nu \laplace \vec{u}
+    \;+\; \vec{f}\\[2mm]
+    \grad \cdot \vec{u} &=& 0
+  \end{eqnarray}$$
+- Formeln können referenziert und verlinkt werden
 
-::: col50
-![Bild-Caption](data/arcarde.png){ height=400px }
+
+
+# Virtuelle Tafel
+
+::: incremental
+
+- Herleitungen an der Tafel sind nicht in Videoaufzeichnung
+- Herleitungen auf den Folien sind zu schnell
+  $$
+  \begin{eqnarray*}
+  a &=& b \\
+  a^2 &=& ab \\
+  2a^2 &=& a^2 + ab \\
+  2a^2-2ab &=& a^2 - ab \\
+  2a(a-b) &=& a (a-b) \\
+  2a &=& a \\
+  2 &=& 1
+  \end{eqnarray*}
+  $$
+- Die virtuelle Tafel ist ein guter Kompromiss.
+
 :::
-
-::: col50
-![Video-Caption](data/donkeykong.mp4){ height=400px .controls .autoplay }
-:::
-
-
-
-# Bild-Sequenzen
-
-![](data/laserMario1.jpg){ width=500px .fragment .sequence }
-![](data/laserMario2.jpg){ width=500px .fragment .sequence }
-![](data/laserMario3.jpg){ width=500px .fragment .sequence }
-![](data/laserMario4.jpg){ width=500px .fragment .sequence }
-
-
-
-# 3D-Modelle
-
-![Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren](data/amo.off){ width=800px height=600px }
-
-
-
-# Animierte Vektorgrafiken
-
-![de Casteljau Algorithmus](data/deCasteljau.svg){.embed width=800px}
-
-
-
-# Webseiten
-
-![](https://graphics.uni-bielefeld.de/index.html){ width=800px height=600px }
-
 
 
 
 # Source Code mit [highlight.js](https://highlightjs.org/)
 
 ::: col50
-``` {.haskell .line-numbers caption="Quicksort in Haskell<br>(with code marking)"}
+``` {.haskell .line-numbers caption="Quicksort in Haskell<br>(mit Code-Hervorhebungen)"}
 qsort []     = []
 qsort (x:xs) = <mark>qsort small ++ mid ++ qsort large</mark>
   where
@@ -173,7 +182,7 @@ qsort (x:xs) = <mark>qsort small ++ mid ++ qsort large</mark>
 :::
 
 ::: col50
-``` {.cpp line-numbers="5-10" caption="\\(\pi\\) ausrechnen in C++<br>(with line highlighting)"}
+``` {.cpp line-numbers="5-10" caption="\\(\pi\\) ausrechnen in C++<br>(mit Zeilen-Hervorhebungen)"}
 int     i, N=100000000;
 double  x, dx=1.0/(double)N;
 double  f, pi=0.0;
@@ -191,6 +200,12 @@ printf("pi = %f\n", pi);
 
 
 
+# Webseiten
+
+![](https://graphics.uni-bielefeld.de/index.html){ width=800px height=600px }
+
+
+
 # Tabellen
 
 |                     | Powerpoint | LaTeX-Beamer | HTML-Folien |
@@ -204,6 +219,50 @@ printf("pi = %f\n", pi);
 | Aufwand             |     😊     |      😢      |      😭     |
 
 Table: Warum sind HTML-Folien so toll?
+
+
+
+# Bibliographie mit BibTeX
+
+- Bibliographie kann mit BibTeX verwaltet werden. 
+- Die Referenzen befinden sich am [Ende der Präsentation](#referenzen)
+- Realistische Avatare sind toll [@waltemate2018]
+- @achenbach2017 können sie in <10 Minuten erzeugen
+- Sie können in Echtzeit animiert werden [@komaritzan2019]
+
+
+
+# PDF-Unterstützung
+
+::: col50
+- Folien lassen sich auf Knopfdruck als PDF-Dokuemnt exportieren.
+- PDF-Dokumente lassen sich in Präsentationen einbinden
+:::
+::: col50
+![](eLearning.pdf){ width=600px height=500px }
+:::
+
+
+
+--------------------------------------------------------------------------------
+
+# Statische und dynamische Visualisierungen {.section}
+
+--------------------------------------------------------------------------------
+
+
+# Bild-Sequenzen
+
+![](data/laserMario1.jpg){ height=500px .fragment .sequence }
+![](data/laserMario2.jpg){ height=500px .fragment .sequence }
+![](data/laserMario3.jpg){ height=500px .fragment .sequence }
+![](data/laserMario4.jpg){ height=500px .fragment .sequence }
+
+
+
+# Animierte Vektorgrafiken
+
+![de Casteljau Algorithmus](data/deCasteljau.svg){.embed width=800px}
 
 
 
@@ -332,6 +391,30 @@ fit [0:2000] [0:1500] f3(x) "data/house-price-to-size.dat" via f,g,h,i
 
 plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838", f1(x) title "Test" lc "blue"  lw 3, f2(x) lc "green" lw 3,  f3(x) lc "red" lw 3
 ```
+[Marc Latoschik, Uni Würzburg]{.footer}
+
+
+
+# Interaktive Plots
+
+![Auf `3D Surface` klicken!](demos/plotly/plotly.html){ width=1000px height=600px }
+
+[Martin Heistermann, Uni Bern]{.footer}
+
+
+
+# 3D-Modelle
+
+![Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren](data/amo.off){ width=800px height=600px }
+
+
+
+
+--------------------------------------------------------------------------------
+
+# Interaktive Demos {.section}
+
+--------------------------------------------------------------------------------
 
 
 # Interaktive Demos in Javascript
@@ -339,18 +422,9 @@ plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838",
 ![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ width=1000px height=600px }
 
 
+# Interaktive Demos in Javascript
 
-# Mathe-Formeln mit [MathJax](https://www.mathjax.org/)
-
-- Navier-Stokes-Gleichungen
-  $$\begin{eqnarray}
-    \dot{\vec{u}} &=& -\vec{u}\cdot\grad\vec{u}
-    \;-\; \frac{1}{\rho}\grad p
-    \;+\; \nu \laplace \vec{u}
-    \;+\; \vec{f}\\[2mm]
-    \grad \cdot \vec{u} &=& 0
-  \end{eqnarray}$$
-
+![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ width=1000px height=600px }
 
 
 # Komplexere Demos in C++
@@ -358,29 +432,21 @@ plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838",
 ![Rechte Maus: Flüssigkeit injizieren. Linke Maus: Verwirbeln](demos/fluids/fluids.html){ width=1000px height=600px }
 
 
+# Interaktive Mathe mit SAGE
+
+![](demos/sage/fit-polynomial.html){ width=1200px height=650px }
 
 
-# Virtuelle Tafel
+# Shader-Programmierung
 
-::: incremental
+![Press `Ctrl-Enter` or `Cmd-Enter` to compile shaders](demos/webgl-shader/alpha-map.html){ width=1200px height=600px }
 
-- Herleitungen an der Tafel sind nicht in Videoaufzeichnung
-- Herleitungen auf den Folien sind zu schnell
-  $$
-  \begin{eqnarray*}
-  a &=& b \\
-  a^2 &=& ab \\
-  2a^2 &=& a^2 + ab \\
-  2a^2-2ab &=& a^2 - ab \\
-  2a(a-b) &=& a (a-b) \\
-  2a &=& a \\
-  2 &=& 1
-  \end{eqnarray*}
-  $$
-- Die virtuelle Tafel ist ein guter Kompromiss.
 
-:::
+--------------------------------------------------------------------------------
 
+# Quizzes und Selbstlernphase {.section}
+
+--------------------------------------------------------------------------------
 
 
 # Audience Response System { .quiz }
@@ -400,16 +466,16 @@ Wer bekommt am Ende die Prinzessin?
 [Hier können Vorlesungsteilnehmer*innen online abstimmen, wenn der Quiz-Server gestartet wird.]{.footer}
 
 
+# Zuordnungsaufgaben
 
-# PDF-Export
+{match} Prinzessin
+: ![](data/peach.png){height=100px}
 
-::: col50
-- Folien lassen sich als PDF exportieren.
-- PDF-Dokumente lassen sich in Präsentationen einbinden
-:::
-::: col50
-![](eLearning.pdf){ width=600px height=500px }
-:::
+{match} Donkey Kong
+: ![](data/donkeykong.png){height=100px}
+
+{match} Supermario
+: ![](data/supermario.png){height=100px}
 
 
 --------------------------------------------------------------------------------
@@ -436,9 +502,17 @@ Wer bekommt am Ende die Prinzessin?
 - [decker](https://gitlab2.informatik.uni-wuerzburg.de/decker/decker)
     - `decker` basiert auf `pandoc` und übersetzt Markdown in HTML-Folien.
     - Es erweitert `pandoc` und `reveal.js` um zusätzliche Filter und Plugins.
-    - Als Beispiel der [Quelltext](eLearning.md) zu diesem Vortrag
-    - Wird entwickelt von [Universität Würzburg](http://hci.uni-wuerzburg.de), 
-      [Beuth Hochschule Berlin](https://tramberend.beuth-hochschule.de/) 
-      und [Universität Bielefeld](https://graphics.uni-bielefeld.de/).
+    - Wird entwickelt von [Marc Latoschik & Team](http://hci.uni-wuerzburg.de/people/marc/) (Uni Würzburg), 
+      [Henrik Tramberend](https://tramberend.beuth-hochschule.de/) (Beuth Hochschule Berlin)
+      und [Mario Botsch](https://graphics.uni-bielefeld.de/people/botsch_mario/botsch_mario.html) (Uni Bielefeld).
 :::
+
+
+--------------------------------------------------------------------------------
+
+# Literatur {.section}
+
+--------------------------------------------------------------------------------
+
+# Referenzen
 

@@ -1,0 +1,30 @@
+html,body {
+    background-color: #ffffff;
+    text-align:       center;
+    border:           0px;
+    padding:          0px;
+    margin:           0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+canvas {
+    background-color: #ffffff;
+    border:     0px none;  /* no border, otherwise mouse coords will be wrong */
+    padding:    0px;       /* no padding, otherwise mouse coords will be wrong */
+    margin:     0px auto;
+    max-width:  100vw;     /* don't grow more than screen height */
+    max-height: 100vh;     /* don't grow more than screen height */
+    display:    block;
+    overflow:   hidden;
+    width:      30vw;
+    height:     30vw;
+    float:      right;
+}
+
+div.editor {
+    width:  34vw;
+    height: 100vh;
+    float:  left;
+}
+

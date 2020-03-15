@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>
+    sagecell.makeSagecell({ inputLocation: 'div.compute',
+                            evalButtonText: 'Evaluate',
+                            linked: true,
+                            hide: ['fullScreen'] });
+    </script>
+
+
+<div class="compute"><script type="text/x-sage">
+# some points that we want to interpolate
+points = matrix([ [0,0], [1,1], [2,-1], [3,0], [2.5,0.5], [3,1] ])
+pointsPlot = plot(line(points, color="red", aspect_ratio=1))
+show(pointsPlot)
+</script></div>
+
+
+<div class="compute" style="height:400px"><script type="text/x-sage">
+# select n points -> Probieren Sie verschiedene n zwische 2 und 6 aus!
+n = 6
+B = points.submatrix(0,0,n,2)
+
+# define matrix for polynomial interpolation
+A = matrix(n, n, lambda i,j: i^j)
+
+# solve A*X=B, then X contains the poly coefficients
+X = A\B
+
+# define function for evaluating polynomial
+var('k, coeffs, t')
+def curve(coeffs, t):
+    return sum(coeffs[k] * t^k for k in [0..n-1])
+   
+# finally, plot fitted curves and point set
+curvePlot = parametric_plot(curve(X,t), (t, 0, n-1))
+show(pointsPlot + curvePlot)
+</script></div>
+
+
+</body>
+</html>
