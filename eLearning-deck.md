@@ -101,20 +101,6 @@ height:       800
 
 # Task-Listen
 
-::: {.col50 .left}
-- Was ist "gecheck(box)ed"?
-    - [X] Mathe
-    - [X] Informatik
-    - [ ] alles andere
-:::
-
-::: {.col50 .left .thumb}
-- Was ist cool?
-    - [X] Mathe
-    - [X] Informatik
-    - [ ] alles andere
-:::
-
 ::: {.col50 .left .check-cross}
 - Was können wir?
     - [X] Mathe
@@ -127,6 +113,20 @@ height:       800
     - [X] Mathe
     - [X] Informatik
     - [ ] alles andere
+:::
+
+::: {.col50 .left .thumb}
+- Was ist cool?
+    - [X] Mathe
+    - [X] Informatik
+    - [ ] alles andere
+:::
+
+::: {.col50 .left}
+- Wer braucht mehr :moneybag:?
+    - [X] Mathe
+    - [X] Informatik
+    - [X] alle anderen
 :::
 
 
@@ -225,11 +225,16 @@ Table: Warum sind HTML-Folien so toll?
 # Bibliographie mit BibTeX
 
 - Bibliographie kann mit BibTeX verwaltet werden. 
-- Die Referenzen befinden sich am [Ende der Präsentation](#referenzen)
+- Referenzliste wird automatisch erstellt
 - Realistische Avatare sind toll [@waltemate2018]
 - @achenbach2017 können sie in <10 Minuten erzeugen
 - Sie können in Echtzeit animiert werden [@komaritzan2019]
 
+
+# Referenzen
+
+::: { #refs }
+:::
 
 
 # PDF-Unterstützung
@@ -405,8 +410,9 @@ plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838",
 
 # 3D-Modelle
 
-![Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren](data/amo.off){ width=800px height=600px }
+![Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren](data/amo.off){ width=800px height=550px }
 
+[Visualisiert durch [Polygon Mesh Processing Library](http://pmp-library.org)]{.footer}
 
 
 
@@ -466,7 +472,12 @@ Wer bekommt am Ende die Prinzessin?
 [Hier können Vorlesungsteilnehmer*innen online abstimmen, wenn der Quiz-Server gestartet wird.]{.footer}
 
 
+
 # Zuordnungsaufgaben
+
+"Who is who" per Drag&Drop zuordnen
+
+[:vspace](30px)
 
 {match} Prinzessin
 : ![](data/peach.png){height=100px}
@@ -476,6 +487,32 @@ Wer bekommt am Ende die Prinzessin?
 
 {match} Supermario
 : ![](data/supermario.png){height=100px}
+
+
+
+# Freitextaufgaben
+
+[:vspace](30px)
+
+::: col40
+![](data/peach.png){height=150px}
+:::
+::: col60
+* {?} Wie heißt die Prinzessin?
+* {!} Peach
+:::
+
+[:vspace](50px)
+
+::: col40
+![](data/donkeykong.png){height=150px}
+![](data/supermario.png){height=150px}
+![](data/spongebob.png){height=130px}
+:::
+::: col60
+{blanktext}
+: Die Prinzessin ist verliebt in {Donkey Kong|!Supermario|Sponge Bob}.
+:::
 
 
 --------------------------------------------------------------------------------
@@ -505,14 +542,7 @@ Wer bekommt am Ende die Prinzessin?
     - Wird entwickelt von [Marc Latoschik & Team](http://hci.uni-wuerzburg.de/people/marc/) (Uni Würzburg), 
       [Henrik Tramberend](https://tramberend.beuth-hochschule.de/) (Beuth Hochschule Berlin)
       und [Mario Botsch](https://graphics.uni-bielefeld.de/people/botsch_mario/botsch_mario.html) (Uni Bielefeld).
+    - Wird verwendet an Uni Würzburg, Beuth Hochschule Berlin, Uni Bielefeld, Uni Osnabrück, Uni Bern und EPFL.
 :::
 
-
---------------------------------------------------------------------------------
-
-# Literatur {.section}
-
---------------------------------------------------------------------------------
-
-# Referenzen
 
