@@ -240,7 +240,7 @@ Table: Warum sind HTML-Folien so toll?
 # PDF-Unterstützung
 
 ::: col50
-- Folien lassen sich auf Knopfdruck als PDF-Dokuemnt exportieren.
+- Folien lassen sich auf Knopfdruck als PDF-Dokument exportieren.
 - PDF-Dokumente lassen sich in Präsentationen einbinden
 :::
 ::: col50
