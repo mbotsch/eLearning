@@ -202,7 +202,7 @@ printf("pi = %f\n", pi);
 
 # Webseiten
 
-![](https://graphics.uni-bielefeld.de/index.html){ width=800px height=600px }
+![](https://graphics.uni-bielefeld.de/index.html){ width=800px height=600px .print }
 
 
 
@@ -402,7 +402,7 @@ plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838",
 
 # Interaktive Plots
 
-![Auf `3D Surface` klicken!](demos/plotly/plotly.html){ width=1000px height=600px }
+![Auf `3D Surface` klicken!](demos/plotly/plotly.html){ width=1000px height=600px .print }
 
 [Martin Heistermann, Uni Bern]{.footer}
 
@@ -425,12 +425,12 @@ plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838",
 
 # Interaktive Demos in Javascript
 
-![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ width=1000px height=600px }
+![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ width=1000px height=600px .print }
 
 
 # Interaktive Demos in Javascript
 
-![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ width=1000px height=600px }
+![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ width=1000px height=600px .print }
 
 
 # Komplexere Demos in C++
@@ -440,7 +440,7 @@ plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838",
 
 # Interaktive Mathe mit SAGE
 
-![](demos/sage/fit-polynomial.html){ width=1200px height=650px }
+![](demos/sage/fit-polynomial.html){ width=1200px height=650px .print }
 
 
 # Shader-Programmierung
@@ -513,6 +513,13 @@ Wer bekommt am Ende die Prinzessin?
 {blanktext}
 : Die Prinzessin ist verliebt in {Donkey Kong|!Supermario|Sponge Bob}.
 :::
+
+
+# Embedded [NanoQuiz](https://vccourses.cs.ovgu.de/roessl/nanocquiz)
+
+![](https://vccourses.cs.ovgu.de/pubdoc/einfinf19-quiz/q/grundkonzepteinjava2/){ .iframe width=100% height=600px }
+
+[Thanks to Christian Rössl, Uni Magdeburg]{.footer}
 
 
 --------------------------------------------------------------------------------

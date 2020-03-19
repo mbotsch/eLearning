@@ -10,6 +10,11 @@ html,body {
     font-size:        20px;
 }
 
+body {
+    padding:    10px;
+    box-sizing: border-box;
+}
+
 button.sagecell_evalButton {
     font-size:     20px;
     margin-bottom: 10px;
