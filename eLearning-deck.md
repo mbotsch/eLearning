@@ -440,12 +440,91 @@ plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838",
 
 # Interaktive Mathe mit SAGE
 
-![](demos/sage/fit-polynomial.html){ width=1200px height=650px .print }
+::: { .sageCell .stretch }
+
+Wir definieren ein paar Punkte $\mathbf{x}_1, \dots, \mathbf{x}_6$ und verbinden sie zu einem Linienzug:
+
+``` sage
+points = matrix([ [0,0], [1,1], [2,-1], [3,0], [2.5,0.5], [3,1] ])
+pointsPlot = plot(line(points, color="red", aspect_ratio=1))
+show(pointsPlot)
+```
+
+Jetzt interpolieren wir die Punkte $\mathbf{x}_1, \dots, \mathbf{x}_n$ mit einem Polynom vom Grad $n-1$.
+Testen Sie verschiedene Werte für $n \in \{2, \dots, 6 \}$. Was fällt auf?
+
+``` sage
+# select n points
+n = 6
+B = points.submatrix(0,0,n,2)
+
+# define matrix for polynomial interpolation
+A = matrix(n, n, lambda i,j: i^j)
+
+# solve A*X=B, then X contains the poly coefficients
+X = A\B
+
+# define function for evaluating polynomial
+var('k, coeffs, t')
+def curve(coeffs, t):
+    return sum(coeffs[k] * t^k for k in [0..n-1])
+   
+# finally, plot fitted curves and point set
+curvePlot = parametric_plot(curve(X,t), (t, 0, n-1))
+show(pointsPlot + curvePlot)
+```
+:::
+
+
+# Interaktives Python mit SAGE
+
+::: { .sageCell .stretch }
+``` python
+from math import exp,pi,cos,sin
+import matplotlib.pyplot as plt
+import numpy as np
+x0=1; t0=0; tf=25; x=x0; t=t0;
+h = pi/16
+X=[]
+T=[]
+while t < tf:
+    X.append(x)
+    T.append(t)
+    x = x + h*(-x*cos(t));
+    t = t+h
+plt.plot(T,X,'b*--')
+T1=np.linspace(t0,tf,200);
+plt.plot(T1,[exp(-sin(t)) for t in T1],'r-')
+plt.title('h = %f' % (h))
+plt.legend(('Numerical solution','Exact solution'),loc='upper left')
+plt.show()
+```
+:::
+
+
+# Interaktive Statistic mit R und SAGE
+
+::: { .sageCell .stretch }
+Die Trainingsdaten bestehen aus Alter und Maximalpuls als $x$- und $y$-Koordinaten.
+
+``` rr
+x = c(18,23,25,35,65,54,34,56,72,19,23,42,18,39,37) # ages of individuals
+y = c(202,186,187,180,156,169,174,172,153,199,193,174,198,183,178) # maximum heart rate of each one
+```
+
+Wir fitten jetzt eine Gerade durch lineare Regression:
+
+``` rr
+plot(x,y) # make a plot
+lm(y ~ x) # do the linear regression
+abline(lm(y ~ x)) # plot the regression line
+```
+:::
 
 
 # Shader-Programmierung
 
-![Press `Ctrl-Enter` or `Cmd-Enter` to compile shaders](demos/webgl-shader/alpha-map.html){ width=1200px height=600px }
+![Press `Ctrl-Enter` or `Cmd-Enter` to compile shaders](demos/webgl-shader/alpha-map.html){ .stretch }
 
 
 --------------------------------------------------------------------------------

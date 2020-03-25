@@ -6,7 +6,6 @@ var canvas;
 var gl;
 var veditor;
 var feditor;
-var fsButton = document.getElementById('fs-button');
 
 // WebGL objects
 var sphere;
@@ -64,26 +63,6 @@ window.onload = function()
     render_loop();
 }
 
-
-//------------------------------------------------------------------------------
-
-
-fsButton.onclick = function() { 
-    if (document.fullscreenElement)
-        document.exitFullscreen();
-    else 
-        document.getElementById('container').requestFullscreen();
-}; 
-
-
-//------------------------------------------------------------------------------
-
-document.onfullscreenchange = function() {
-    if (document.fullscreenElement)
-        fsButton.src = "compress-arrows-alt.svg";
-    else
-        fsButton.src = "expand-arrows-alt.svg";
-};
 
 //------------------------------------------------------------------------------
 
