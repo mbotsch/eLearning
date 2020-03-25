@@ -19,7 +19,9 @@ height:       800
   (<i class="fas fa-edit small" style="color:red"></i>),
   wurde etwas auf die virtuelle Tafel geschrieben. 
   Ein Mausklick auf das Icon zeigt/versteckt die Tafel.
-- Für die 3D-Demos am besten Google Chrome oder Firefox verwenden.
+- Für die 3D-Demos am besten Google Chrome oder Firefox verwenden. 
+  Apple's Safari implementiert leider nicht alle nötigen Web-Standards, so dass
+  manche interaktiven Demos nicht funktionieren.
 
 
 
@@ -225,10 +227,11 @@ Table: Warum sind HTML-Folien so toll?
 # Bibliographie mit BibTeX
 
 - Bibliographie kann mit BibTeX verwaltet werden. 
-- Referenzliste wird automatisch erstellt
-- Realistische Avatare sind toll [@waltemate2018]
-- @achenbach2017 können sie in <10 Minuten erzeugen
-- Sie können in Echtzeit animiert werden [@komaritzan2019]
+- Die Referenzliste wird dann automatisch erstellt (siehe nächste Folie).
+- Hier ein Beispiel:
+    - Realistische Avatare sind toll [@waltemate2018] :thumbsup:.
+    - @achenbach2017 können sie in <10 Minuten erzeugen :astonished:.
+    - Sie können in Echtzeit animiert werden [@komaritzan2019] :muscle:.
 
 
 # Referenzen
@@ -258,10 +261,10 @@ Table: Warum sind HTML-Folien so toll?
 
 # Bild-Sequenzen
 
-![](data/laserMario1.jpg){ height=500px .fragment .sequence }
-![](data/laserMario2.jpg){ height=500px .fragment .sequence }
-![](data/laserMario3.jpg){ height=500px .fragment .sequence }
 ![](data/laserMario4.jpg){ height=500px .fragment .sequence }
+![](data/laserMario3.jpg){ height=500px .fragment .sequence }
+![](data/laserMario2.jpg){ height=500px .fragment .sequence }
+![](data/laserMario1.jpg){ height=500px .fragment .sequence }
 
 
 
@@ -292,7 +295,7 @@ Irgendwelche Zahlen, 5, 6, 5, 2, 3, 3, 4, 3, 3, 5, 11
 
 # Graph-Diagramme mit [GraphViz](https://www.graphviz.org/)
 
-``` {.dot .render height=500px}
+``` {.dot .render style="height:500px"}
 digraph {
     node [style = filled]
     A [fillcolor = red]
@@ -311,7 +314,7 @@ digraph {
 
 # Diagramme mit Tikz/Latex
 
-``` {.tikz .render height=500px}
+``` {.tikz .render style="height:500px"}
 \begin{tikzpicture}[scale=3,cap=round]
   % Local definitions
   \def\costhirty{0.8660256}
@@ -369,7 +372,7 @@ digraph {
 
 # Plots mit [gnuplot](http://www.gnuplot.info/)
 
-``` {.gnuplot .render height=500px }
+``` {.gnuplot .render style="height:500px" }
 set terminal svg 
 
 set xrange [0:2500]
@@ -412,7 +415,7 @@ plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838",
 
 ![Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren](data/amo.off){ width=800px height=550px }
 
-[Visualisiert durch [Polygon Mesh Processing Library](http://pmp-library.org)]{.footer}
+[[Polygon Mesh Processing Library](http://pmp-library.org)]{.footer}
 
 
 
@@ -428,19 +431,19 @@ plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838",
 ![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ width=1000px height=600px .print }
 
 
-# Interaktive Demos in Javascript
+# Interaktive Demos mit [D3.js](https://d3js.org/)
 
 ![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ width=1000px height=600px .print }
 
 
 # Komplexere Demos in C++
 
-![Rechte Maus: Flüssigkeit injizieren. Linke Maus: Verwirbeln](demos/fluids/fluids.html){ width=1000px height=600px }
+![Rechte Maustaste: Flüssigkeit injizieren. Linke Maustaste: Verwirbeln](demos/fluids/fluids.html){ width=1000px height=600px }
 
 
 # Interaktive Mathe mit SAGE
 
-::: { .sageCell .stretch }
+::: { .sageCell .stretch .print }
 
 Wir definieren ein paar Punkte $\mathbf{x}_1, \dots, \mathbf{x}_6$ und verbinden sie zu einem Linienzug:
 
@@ -476,9 +479,9 @@ show(pointsPlot + curvePlot)
 :::
 
 
-# Interaktives Python mit SAGE
+# Interaktives Python
 
-::: { .sageCell .stretch }
+::: { .sageCell .stretch .print }
 ``` python
 from math import exp,pi,cos,sin
 import matplotlib.pyplot as plt
@@ -501,15 +504,18 @@ plt.show()
 ```
 :::
 
+[Example from Roberto De Leo, Howard University]{.footer}
+
 
 # Interaktive Statistic mit R und SAGE
 
-::: { .sageCell .stretch }
+::: { .sageCell .stretch .print }
 Die Trainingsdaten bestehen aus Alter und Maximalpuls als $x$- und $y$-Koordinaten.
 
 ``` rr
 x = c(18,23,25,35,65,54,34,56,72,19,23,42,18,39,37) # ages of individuals
 y = c(202,186,187,180,156,169,174,172,153,199,193,174,198,183,178) # maximum heart rate of each one
+plot(x,y) # make a plot
 ```
 
 Wir fitten jetzt eine Gerade durch lineare Regression:
@@ -532,6 +538,12 @@ abline(lm(y ~ x)) # plot the regression line
 # Quizzes und Selbstlernphase {.section}
 
 --------------------------------------------------------------------------------
+
+
+# Audience Response System
+
+<div id="quiz-qr" style="width:500px; margin:auto"></div>
+<p id="quiz-url"></p>
 
 
 # Audience Response System { .quiz }
@@ -596,7 +608,7 @@ Wer bekommt am Ende die Prinzessin?
 
 # Embedded [NanoQuiz](https://vccourses.cs.ovgu.de/roessl/nanocquiz)
 
-![](https://vccourses.cs.ovgu.de/pubdoc/einfinf19-quiz/q/grundkonzepteinjava2/){ .iframe width=100% height=600px }
+![](https://vccourses.cs.ovgu.de/pubdoc/einfinf19-quiz/q/grundkonzepteinjava2/){ .iframe width=100% height=600px .print }
 
 [Thanks to Christian Rössl, Uni Magdeburg]{.footer}
 
