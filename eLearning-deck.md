@@ -270,7 +270,7 @@ Table: Warum sind HTML-Folien so toll?
 
 # Animierte Vektorgrafiken
 
-![de Casteljau Algorithmus](data/deCasteljau.svg){.embed width=800px}
+![de Casteljau Algorithmus](data/deCasteljau.svg){ .embed }
 
 
 
