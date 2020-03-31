@@ -4,8 +4,8 @@ highlightjs:          xcode
 checkOverflow:        true
 
 pdfSeparateFragments: true
-controls:             0
-progress:             0
+controls:             "false"
+progress:             "false"
 slideNumber:          1
 history:              1
 center:               0
@@ -15,10 +15,6 @@ width:                1280
 height:               800
 minScale:             0.2
 maxScale:             5
-
-#decker:
-    #filter:
-        #border: true
 
 exclude-directories:
 - code

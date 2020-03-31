@@ -295,7 +295,7 @@ Irgendwelche Zahlen, 5, 6, 5, 2, 3, 3, 4, 3, 3, 5, 11
 
 # Graph-Diagramme mit [GraphViz](https://www.graphviz.org/)
 
-``` {.dot .render style="height:500px"}
+``` {.dot .render height=500px }
 digraph {
     node [style = filled]
     A [fillcolor = red]
@@ -314,7 +314,7 @@ digraph {
 
 # Diagramme mit Tikz/Latex
 
-``` {.tikz .render style="height:500px"}
+``` {.tikz .render height=500px}
 \begin{tikzpicture}[scale=3,cap=round]
   % Local definitions
   \def\costhirty{0.8660256}
@@ -372,7 +372,7 @@ digraph {
 
 # Plots mit [gnuplot](http://www.gnuplot.info/)
 
-``` {.gnuplot .render style="height:500px" }
+``` {.gnuplot .render height=500px }
 set terminal svg 
 
 set xrange [0:2500]
