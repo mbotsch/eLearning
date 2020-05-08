@@ -314,7 +314,12 @@ digraph {
 
 # Diagramme mit Tikz/Latex
 
-``` {.tikz .render height=500px}
+``` {.tex .render width=500px}
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{verbatim}
+\begin{document}
+\pagestyle{empty}
 \begin{tikzpicture}[scale=3,cap=round]
   % Local definitions
   \def\costhirty{0.8660256}
@@ -366,7 +371,9 @@ digraph {
 
   \draw (0,0) -- (t);
 \end{tikzpicture}
+\end{document}
 ```
+
 
 
 
