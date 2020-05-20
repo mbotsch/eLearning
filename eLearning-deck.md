@@ -15,10 +15,7 @@ height:       800
 - Klick auf **Seitenzahl** (rechts unten) öffnet Navigationsmenü
 - Mit **f**/**ESC** Fullscreen-Modus an-/abschalten
 - **Doppelklick** auf ein Element (z.B. ein Bild) für Rein-/Raus-Zoomen
-- Wenn das **Icon** unten rechts rot ist 
-  (<i class="fas fa-edit small" style="color:red"></i>),
-  wurde etwas auf die virtuelle Tafel geschrieben. 
-  Ein Mausklick auf das Icon zeigt/versteckt die Tafel.
+- Mit **Ctrl-Shift-f** den Such-Dialog öffnen.
 - Für die 3D-Demos am besten Google Chrome oder Firefox verwenden. 
   Apple's Safari implementiert leider nicht alle nötigen Web-Standards, so dass
   manche interaktiven Demos nicht funktionieren.
@@ -147,13 +144,50 @@ height:       800
 
 
 
+# Zeilenweises Einblenden von Gleichungen
+
+::: math-incremental
+$$
+\begin{align*}
+\dot{\mat{R}}(t) \, \bar{\vec{r}}_i 
+&=
+\diff{\mat{R}}{\alpha} \,
+\diff{\alpha}{t} \,
+\bar{\vec{r}}_i \\
+&=
+\matrix{
+	-\sin\alpha & -\cos\alpha \\ 
+	\cos\alpha & -\sin\alpha }
+\dot{\alpha} \, \bar{\vec{r}}_i \\[2mm]
+&=
+\matrix{
+	\cos(\alpha+90^\circ) & -\sin(\alpha+90^\circ) \\ 
+	\sin(\alpha+90^\circ) & \cos(\alpha+90^\circ) }
+\, \bar{\vec{r}}_i \, \dot{\alpha} \\[2mm]
+&=
+\matrix{
+	\cos(90^\circ) & -\sin(90^\circ) \\ 
+	\sin(90^\circ) & \cos(90^\circ) }
+\,
+\matrix{
+	\cos(\alpha) & -\sin(\alpha) \\ 
+	\sin(\alpha) & \cos(\alpha) }
+\, \bar{\vec{r}}_i \, \dot{\alpha} \\[2mm]
+&=
+\omega \, \vec{r}_i^\perp
+\end{align*}
+$$
+:::
+
+
+
 # Virtuelle Tafel
 
 ::: incremental
 
 - Herleitungen an der Tafel sind nicht in Videoaufzeichnung
 - Herleitungen auf den Folien sind zu schnell
-  $$
+  [$$
   \begin{eqnarray*}
   a &=& b \\
   a^2 &=& ab \\
@@ -163,8 +197,8 @@ height:       800
   2a &=& a \\
   2 &=& 1
   \end{eqnarray*}
-  $$
-- Die virtuelle Tafel ist ein guter Kompromiss.
+  $$]{ .math-incremental }
+- Die virtuelle Tafel ist ein guter Kompromiss :thumbsup:
 
 :::
 
