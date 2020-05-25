@@ -134,12 +134,16 @@ height:       800
 
 - Navier-Stokes-Gleichungen
   $$\begin{eqnarray}
-    \dot{\vec{u}} &=& -\vec{u}\cdot\grad\vec{u}
-    \;-\; \frac{1}{\rho}\grad p
-    \;+\; \nu \laplace \vec{u}
-    \;+\; \vec{f}\\[2mm]
-    \grad \cdot \vec{u} &=& 0
+    \dot{\vec{u}} &=& 
+    \fragment{-\vec{u}\cdot\grad\vec{u}}
+    \fragment{\;-\; \frac{1}{\rho}\grad p}
+    \fragment{\;+\; \nu \laplace \vec{u}}
+    \fragment{\;+\; \vec{f}} 
+    \label{eq:momentum} \\[2mm]
+    \grad \cdot \vec{u} &=& 0 
+    \label{eq:incompressibility}
   \end{eqnarray}$$
+- Formeln können schrittweise eingeblendet werden
 - Formeln können referenziert und verlinkt werden
 
 
@@ -179,6 +183,9 @@ $$
 $$
 :::
 
+::: footer
+Hier der Link auf vorherige Formel: $\eqref{eq:momentum}$.
+:::
 
 
 # Virtuelle Tafel
