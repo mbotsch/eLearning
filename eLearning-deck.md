@@ -12,13 +12,15 @@ height:       800
 # Anleitung für die HTML-Folien
 
 - Mit **Cursor-links**/**Cursor-rechts** Folien durchschalten
-- Klick auf **Seitenzahl** (rechts unten) öffnet Navigationsmenü
+- Klick auf Icon <i class="fas fa-bars"></i> (links oben) öffnet das Navigationsmenü
 - Mit **f**/**ESC** Fullscreen-Modus an-/abschalten
 - **Doppelklick** auf ein Element (z.B. ein Bild) für Rein-/Raus-Zoomen
-- Mit **Ctrl-Shift-f** den Such-Dialog öffnen.
+- Mit **Ctrl-Shift-f** den Such-Dialog öffnen, mit **ESC** schließen.
 - Für die 3D-Demos am besten Google Chrome oder Firefox verwenden. 
   Apple's Safari implementiert leider nicht alle nötigen Web-Standards, so dass
   manche interaktiven Demos nicht funktionieren.
+    - Klick auf Icon <i class="fas fa-expand-arrows-alt"></i> (recht oben im Demo-Fenster) 
+      bringt Demos in den Fullscreen-Modus.
 
 
 
