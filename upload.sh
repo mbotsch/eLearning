@@ -2,7 +2,7 @@
 
 # re-build HTML decks
 echo "Build HTML decks"
-decker clean
+#decker clean
 decker decks
 #decker pdf-decks
 
