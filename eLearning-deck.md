@@ -16,6 +16,7 @@ height:       800
 - Mit **f**/**ESC** Fullscreen-Modus an-/abschalten
 - **Doppelklick** auf ein Element (z.B. ein Bild) für Rein-/Raus-Zoomen
 - Mit **Ctrl-Shift-f** den Such-Dialog öffnen, mit **ESC** schließen.
+- Zum virtuellen Whiteboard **runter-scrollen**, wenn der untere Rand blinkt
 - Für die 3D-Demos am besten Google Chrome oder Firefox verwenden. 
   Apple's Safari implementiert leider nicht alle nötigen Web-Standards, so dass
   manche interaktiven Demos nicht funktionieren.
@@ -423,8 +424,6 @@ digraph {
 # Plots mit [gnuplot](http://www.gnuplot.info/)
 
 ``` {.gnuplot .render height=500px }
-set terminal svg 
-
 set xrange [0:2500]
 set yrange [0:1500]
 
@@ -433,9 +432,10 @@ set ytics nomirror
 set key off
 set tic font ",20"
 set border 3
+set margins 15
 
 set xlabel "Grundstückspreis in 1000€" textcolor rgb "black" font "Arial, 25" offset 0
-set ylabel "Grundstücksgröße in qm" textcolor rgb "black" font "Arial, 25" offset 0 rotate by 90
+set ylabel "Grundstücksgröße in m^2" textcolor rgb "black" font "Arial, 25" offset 0 rotate by 90
 
 f1(x) = a + b * x
 f2(x) = c + d * x + e * x * x

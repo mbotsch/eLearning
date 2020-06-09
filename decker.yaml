@@ -2,7 +2,7 @@ mario:                true
 menu:                 true
 highlightjs:          xcode
 checkOverflow:        true
-
+lang:                 de
 pdfSeparateFragments: true
 controls:             "false"
 progress:             "false"
