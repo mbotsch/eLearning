@@ -6,6 +6,7 @@ affiliation:  Universität Bielefeld
 bibliography: bibliography.bib
 width:        1280
 height:       800
+link-citations: true
 ...
 
 
@@ -336,6 +337,25 @@ Irgendwelche Zahlen, 5, 6, 5, 2, 3, 3, 4, 3, 3, 5, 11
 ```
 
 
+# Interaktive Charts mit [chart.js](https://www.chartjs.org/)
+
+``` { .line-chart title="Poisson-System lösen" }
+100k, 200k, 300k, 400k, 500k
+Conjugate Gradients, 3.19, 11.6, 23.6, 37.3, 47.4
+Sparse Cholesky, 0.21, 0.52, 0.83, 1.21, 1.54
+<!--
+{
+  "data": {
+    "datasets":[
+    { "backgroundColor": "rgba(255,255,255,0)" },    
+    { "backgroundColor": "rgba(255,255,255,0)" } 
+    ]
+  }
+}
+-->
+```
+
+
 
 # Graph-Diagramme mit [GraphViz](https://www.graphviz.org/)
 
@@ -620,15 +640,16 @@ Wer bekommt am Ende die Prinzessin?
 
 [:vspace](30px)
 
-{match} Prinzessin
+::: quiz-mi
+Prinzessin
 : ![](data/peach.png){height=100px}
 
-{match} Donkey Kong
+Donkey Kong
 : ![](data/donkeykong.png){height=100px}
 
-{match} Supermario
+Supermario
 : ![](data/supermario.png){height=100px}
-
+:::
 
 
 # Freitextaufgaben
@@ -638,9 +659,11 @@ Wer bekommt am Ende die Prinzessin?
 ::: col40
 ![](data/peach.png){height=150px}
 :::
-::: col60
-* {?} Wie heißt die Prinzessin?
-* {!} Peach
+::: {.col60 .quiz-ft}
+Wie heißt die Prinzessin?
+
+- [x] Peach
+- [ ] Lilifee
 :::
 
 [:vspace](50px)
@@ -650,9 +673,12 @@ Wer bekommt am Ende die Prinzessin?
 ![](data/supermario.png){height=150px}
 ![](data/spongebob.png){height=130px}
 :::
-::: col60
-{blanktext}
-: Die Prinzessin ist verliebt in {Donkey Kong|!Supermario|Sponge Bob}.
+::: {.col60 .quiz-ic}
+Die Prinzessin ist verliebt in 
+
+- [ ] Donkey Kong
+- [x] Supermario
+- [ ] Sponge Bob
 :::
 
 
