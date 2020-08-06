@@ -1,8 +1,8 @@
 ---
 title:        Probieren hilft beim Studieren
 subtitle:     Interaktive Vorlesungsfolien im Webbrowser
-author:       Mario Botsch
-affiliation:  Universität Bielefeld
+author:       Prof. Dr. Mario Botsch
+affiliation:  TU Dortmund
 bibliography: bibliography.bib
 width:        1280
 height:       800
@@ -249,7 +249,7 @@ printf("pi = %f\n", pi);
 
 # Webseiten
 
-![](https://graphics.uni-bielefeld.de/index.html){ width=800px height=600px .print }
+![](https://tu-dortmund.de/index.html){ width=800px height=600px .print }
 
 
 
@@ -680,13 +680,6 @@ Die Prinzessin ist verliebt in
 - [x] Supermario
 - [ ] Sponge Bob
 :::
-
-
-# Embedded [NanoQuiz](https://vccourses.cs.ovgu.de/roessl/nanocquiz)
-
-![](https://vccourses.cs.ovgu.de/pubdoc/einfinf19-quiz/q/grundkonzepteinjava2/){ .iframe width=100% height=600px .print }
-
-[Thanks to Christian Rössl, Uni Magdeburg]{.footer}
 
 
 --------------------------------------------------------------------------------
