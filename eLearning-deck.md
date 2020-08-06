@@ -446,7 +446,7 @@ digraph {
 ``` {.gnuplot .render height=500px }
 set xrange [0:2500]
 set yrange [0:1500]
-
+set fit quiet
 set xtics nomirror
 set ytics nomirror 
 set key off
