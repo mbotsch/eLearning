@@ -25,7 +25,6 @@ link-citations: true
       bringt Demos in den Fullscreen-Modus.
 
 
-
 --------------------------------------------------------------------------------
 
 # Features der HTML-Folien {.section}
@@ -249,7 +248,7 @@ printf("pi = %f\n", pi);
 
 # Webseiten
 
-![](https://tu-dortmund.de/index.html){ width=800px height=600px .print }
+![](https://graphics.uni-bielefeld.de/index.html){ width=800px height=600px .print }
 
 
 

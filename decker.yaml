@@ -16,6 +16,8 @@ height:               800
 minScale:             0.2
 maxScale:             5
 
+decker-engine-base-url: 'https://tramberend.beuth-hochschule.de/decker'
+
 exclude-directories:
 - code
 - log
@@ -24,3 +26,4 @@ exclude-directories:
 static-resource-dirs:
 - data
 - demos
+
