@@ -1,7 +1,7 @@
 mario:                true
 menu:                 true
 highlightjs:          xcode
-checkOverflow:        true
+checkOverflow:        "false"
 lang:                 de
 pdfSeparateFragments: true
 controls:             "false"

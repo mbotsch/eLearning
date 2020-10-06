@@ -576,7 +576,7 @@ plt.show()
 [Example from Roberto De Leo, Howard University]{.footer}
 
 
-# Interaktive Statistic mit R und SAGE
+# Interaktive Statistik mit R und SAGE
 
 ::: { .sageCell .stretch .print }
 Die Trainingsdaten bestehen aus Alter und Maximalpuls als $x$- und $y$-Koordinaten.
