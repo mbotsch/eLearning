@@ -248,7 +248,7 @@ printf("pi = %f\n", pi);
 
 # Webseiten
 
-![](https://graphics.uni-bielefeld.de/index.html){ width=800px height=600px .print }
+![](https://ls7-gv.cs.tu-dortmund.de/index.html){ width=800px height=600px .print }
 
 
 
