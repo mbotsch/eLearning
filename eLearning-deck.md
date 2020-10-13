@@ -651,6 +651,26 @@ Supermario
 :::
 
 
+# Zuordnungsaufgaben
+
+[:vspace](30px)
+
+::: quiz-mi
+Laplacian
+: $\laplace f$
+
+Gradient
+: $\grad f$
+
+Divergence
+: $\grad \cdot f$ 
+
+Quatsch
+: $\laplace \cdot f$ 
+:::
+
+
+
 # Freitextaufgaben
 
 [:vspace](30px)
