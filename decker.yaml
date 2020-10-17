@@ -7,7 +7,6 @@ pdfSeparateFragments: true
 controls:             "false"
 progress:             "false"
 slideNumber:          1
-history:              1
 center:               0
 transition:           'none'
 viewDistance:         2
