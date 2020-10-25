@@ -727,8 +727,8 @@ Die Prinzessin ist verliebt in
     - Es erweitert `pandoc` und `reveal.js` um zusätzliche Filter und Plugins.
     - Wird entwickelt von [Marc Latoschik & Team](http://hci.uni-wuerzburg.de/people/marc/) (Uni Würzburg), 
       [Henrik Tramberend](https://tramberend.beuth-hochschule.de/) (Beuth Hochschule Berlin)
-      und [Mario Botsch](https://graphics.uni-bielefeld.de/people/botsch_mario/botsch_mario.html) (Uni Bielefeld).
-    - Wird verwendet an Uni Würzburg, Beuth Hochschule Berlin, Uni Bielefeld, Uni Osnabrück, Uni Bern und EPFL.
+      und [Mario Botsch](https://graphics.uni-bielefeld.de/people/botsch_mario/botsch_mario.html) (TU Dortmund).
+    - Wird verwendet an Uni Würzburg, Beuth Hochschule Berlin, TU Dortmund, Uni Bielefeld, Uni Osnabrück, Uni Bern und EPFL.
 :::
 
 
