@@ -20,6 +20,11 @@ decker-engine:
   base-url: 'https://tramberend.beuth-hochschule.de/decker'
   deck-id:  'mb-elearning-example'
 
+publish:
+  rsync:
+      destination: '/Users/botsch/www/downloads/elearning'
+      options: '-av'
+
 exclude-directories:
 - code
 - log
