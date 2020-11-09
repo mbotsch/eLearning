@@ -14,8 +14,11 @@ width:                1280
 height:               800
 minScale:             0.2
 maxScale:             5
+vertical-slides:      false
 
-decker-engine-base-url: 'https://tramberend.beuth-hochschule.de/decker'
+decker-engine:
+  base-url: 'https://tramberend.beuth-hochschule.de/decker'
+  deck-id:  'mb-elearning-example'
 
 exclude-directories:
 - code
@@ -25,4 +28,3 @@ exclude-directories:
 static-resource-dirs:
 - data
 - demos
-

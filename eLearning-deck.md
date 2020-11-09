@@ -2,7 +2,7 @@
 title:        Probieren hilft beim Studieren
 subtitle:     Interaktive Vorlesungsfolien im Webbrowser
 author:       Prof. Dr. Mario Botsch
-affiliation:  TU Dortmund
+affiliation:  Lehrstuhl für Computergraphik, TU Dortmund
 bibliography: bibliography.bib
 width:        1280
 height:       800
@@ -53,7 +53,7 @@ link-citations: true
 - Peach
     - Die Prinzessin
 - Donkey Kong
-    - Der böse Affe
+    - Der Böse
 :::
 :::
 
@@ -602,24 +602,23 @@ abline(lm(y ~ x)) # plot the regression line
 ![Press `Ctrl-Enter` or `Cmd-Enter` to compile shaders](demos/webgl-shader/alpha-map.html){ .stretch }
 
 
---------------------------------------------------------------------------------
 
 # Quizzes und Selbstlernphase {.section}
 
---------------------------------------------------------------------------------
 
 
-# Audience Response System
+<!-- # Audience Response System
 
 <div id="quiz-qr" style="width:500px; margin:auto"></div>
-<p id="quiz-url"></p>
+<p id="quiz-url"></p> -->
 
 
-# Audience Response System { .quiz }
+# Audience Response System 
 
 ![](data/peach.png){height=100px}
 Wer bekommt am Ende die Prinzessin?
 
+::: {.quiz .w80}
 - [ ] Donkey Kong ![](data/donkeykong.png){height=100px}
     - Nein, der ist böse!
 - [ ] Sponge Bob ![](data/spongebob.png){height=100px}
@@ -628,6 +627,7 @@ Wer bekommt am Ende die Prinzessin?
     - Nein, den mag keiner!
 - [X] Supermario ![](data/supermario.png){height=100px} 
     - Klar!
+:::
 
 [Hier können Vorlesungsteilnehmer*innen online abstimmen, wenn der Quiz-Server gestartet wird.]{.footer}
 
@@ -701,6 +701,15 @@ Die Prinzessin ist verliebt in
 :::
 
 
+
+# Fragensammlung
+
+- Mit dem Icon <i class="fas fa-question-circle"></i> (oben rechts) können Studierende pro Folie anonym Fragen posten.
+- Die Fragen sind für alle Vorlesungsteilnehmer*innen sichtbar und können dann z.B. in einer Online-Fragestunde besprochen werden.
+- Im Menu (Icon <i class="fas fa-bars"></i> oben links) werden die Fragen in der Folienübersicht auch angezeigt.
+
+
+
 --------------------------------------------------------------------------------
 
 # Folienerstellung {.section}
@@ -725,10 +734,9 @@ Die Prinzessin ist verliebt in
 - [decker](https://gitlab2.informatik.uni-wuerzburg.de/decker/decker)
     - `decker` basiert auf `pandoc` und übersetzt Markdown in HTML-Folien.
     - Es erweitert `pandoc` und `reveal.js` um zusätzliche Filter und Plugins.
-    - Wird entwickelt von [Marc Latoschik & Team](http://hci.uni-wuerzburg.de/people/marc/) (Uni Würzburg), 
-      [Henrik Tramberend](https://tramberend.beuth-hochschule.de/) (Beuth Hochschule Berlin)
-      und [Mario Botsch](https://graphics.uni-bielefeld.de/people/botsch_mario/botsch_mario.html) (TU Dortmund).
-    - Wird verwendet an Uni Würzburg, Beuth Hochschule Berlin, TU Dortmund, Uni Bielefeld, Uni Osnabrück, Uni Bern und EPFL.
+    - Wird entwickelt von 
+      [Prof. Henrik Tramberend](https://tramberend.beuth-hochschule.de/) (Beuth Hochschule Berlin),
+      [Prof. Mario Botsch](https://graphics.uni-bielefeld.de/people/botsch_mario/botsch_mario.html) (TU Dortmund) und
+      [Prof. Marc Latoschik & Team](http://hci.uni-wuerzburg.de/people/marc/) (Uni Würzburg).
+    - Wird verwendet an Uni Würzburg, Beuth Hochschule Berlin, TU Dortmund, Uni Osnabrück, Uni Magdeburg, Uni Bern und EPFL.
 :::
-
-
