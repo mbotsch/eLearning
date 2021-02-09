@@ -3,7 +3,8 @@ title:        Probieren hilft beim Studieren
 subtitle:     Interaktive Vorlesungsfolien im Webbrowser
 author:       Prof. Dr. Mario Botsch
 affiliation:  Lehrstuhl für Computergraphik, TU Dortmund
-bibliography: bibliography.bib
+bibliography: bibliography.bib 
+csl:          chicago-author-date.csl
 width:        1280
 height:       800
 link-citations: true
@@ -248,7 +249,7 @@ printf("pi = %f\n", pi);
 
 # Webseiten
 
-![](https://ls7-gv.cs.tu-dortmund.de/index.html){ width=800px height=600px .print }
+![](https://graphics.cs.tu-dortmund.de/){ width=1000px height=600px .print .iframe }
 
 
 
@@ -325,7 +326,6 @@ Table: Warum sind HTML-Folien so toll?
 Irgendwelche Zahlen, 5, 6, 5, 2, 3, 3, 4, 3, 3, 5, 11
 Andere Zahlen, 11, 8, 5, 5, 2, 7, 4, 1, 5, 0, 15
 ```
-
 
 
 # Interaktive Charts mit [chart.js](https://www.chartjs.org/)
