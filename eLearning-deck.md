@@ -6,25 +6,48 @@ affiliation:  Lehrstuhl für Computergraphik, TU Dortmund
 bibliography: bibliography.bib 
 csl:          chicago-author-date.csl
 width:        1280
-height:       800
+height:       720
 link-citations: true
+explain:
+  recWidth: 1920
+  recHeight: 1080
 ...
 
 
 # Anleitung für die HTML-Folien
 
-- Mit **Cursor-links**/**Cursor-rechts** Folien durchschalten
-- Klick auf Icon <i class="fas fa-bars"></i> (links oben) öffnet das Navigationsmenü
-- Mit **f**/**ESC** Fullscreen-Modus an-/abschalten
-- **Doppelklick** auf ein Element (z.B. ein Bild) für Rein-/Raus-Zoomen
-- Mit **Ctrl-Shift-f** den Such-Dialog öffnen, mit **ESC** schließen.
-- Zum virtuellen Whiteboard **runter-scrollen**, wenn der untere Rand blinkt
-- Für die 3D-Demos am besten Google Chrome oder Firefox verwenden. 
-  Apple's Safari implementiert leider nicht alle nötigen Web-Standards, so dass
+::: {.w80 .small}
+- Am besten Google Chrome oder Firefox verwenden. 
+  Apple's Safari implementiert nicht alle benötigen Web-Standards, so dass
   manche interaktiven Demos nicht funktionieren.
-    - Klick auf Icon <i class="fas fa-expand-arrows-alt"></i> (recht oben im Demo-Fenster) 
-      bringt Demos in den Fullscreen-Modus.
+- **Cursor-links**/**Cursor-rechts** blättern durch Folien.
+- **f**/**ESC** schalten Fullscreen-Modus an/aus.
+- **Ctrl-Shift-f** öffnet Such-Dialog öffnen, **ESC** schließt ihn wieder.
+- <i class="fas fa-bars"></i> (links oben) öffnet das Navigationsmenü.
+- <i class="fas fa-edit"></i> (links unten) schaltet das virtuelle Whiteboard an/aus.
+- <i class="fas fa-play"></i> (rechts oben) spielt aufgezeichnetes Erklärvideo (wenn vorhanden) ab.
+- <i class="fas fa-question-circle"></i> (rechts oben) öffnet das Frage-Panel, wo Fragen pro Folie submitted werden können.
+- <i class="fas fa-expand-arrows-alt"></i> (recht oben im Demo-Fenster) 
+  bringt Demo-Apps in den Fullscreen-Modus.
+- **Doppelklick** auf ein Element (z.B. ein Bild) für Rein-/Raus-Zoomen.
+- Wenn der untere Rand blinkt: Zum virtuellen Whiteboard **runter-scrollen**.
+:::
 
+
+# Videoaufzeichnungen
+
+::: incremental
+- Erklärvideos abspielen:
+  - Video springt automatisch an die Stelle, wo die aktuelle Folie erklärt wird.
+  - **Cursor-links**/**Cursor-rechts** springt im Video folien-weise vor/zurück.
+  - **Space** oder **Maus-Klick** pausiert das Video.
+  - Abspielgeschwindigkeit lässt sich einstellen (von halber bis doppelte Geschwinditkeit).
+  - Beenden des Videos springt automatisch auf die zuletzt erklärte Folie.
+- Erklärvideos aufnehmen:
+  - Videos können direkt in den HTML-Folien aufgenommen werden.
+  - Bildschirm, Kamera und Mikrophon werden aufgezeichnet.
+  - Videos werden automatisch mit Folien synchronisiert.
+:::
 
 --------------------------------------------------------------------------------
 
@@ -36,11 +59,11 @@ link-citations: true
 # Bilder und Videos
 
 ::: col50
-![Bild-Caption](data/arcarde.png){ height=400px }
+![Bilder lassen sich einfach einbinden](data/arcarde.png){ height=400px }
 :::
 
 ::: col50
-![Video-Caption](data/donkeykong.mp4){ height=400px .controls .autoplay }
+![Videos lassen sich genauso einfach einbinden](data/donkeykong.mp4){ height=400px .controls .autoplay }
 :::
 
 
@@ -49,7 +72,7 @@ link-citations: true
 
 ::: col50
 ::: incremental
-- Supermario
+- Mario
     - Der Held
 - Peach
     - Die Prinzessin
@@ -59,9 +82,9 @@ link-citations: true
 :::
 
 ::: col50
-![](data/supermario.png){ height=180px }
-![](data/peach.png){      height=220px }
-![](data/donkeykong.png){ height=300px }
+![Mario](data/supermario.png){ height=180px }
+![Peach](data/peach.png){      height=220px }
+![Donkey Kong](data/donkeykong.png){ height=300px }
 :::
 
 
@@ -69,8 +92,8 @@ link-citations: true
 # Textauszeichnungen
 
 ::: col50
-- **Supermario**
-    - ist fett
+- **Mario**
+    - ist fett (gedruckt)
 - Prinzessin ^Peach^
     - ist hochgestellt
 - *Donkey Kong*
@@ -78,16 +101,16 @@ link-citations: true
 :::
 
 ::: col50
-![](data/supermario.png){ height=180px }
-![](data/peach.png){      height=220px }
-![](data/donkeykong.png){ height=300px }
+![Mario](data/supermario.png){ height=180px }
+![Peach](data/peach.png){      height=220px }
+![Donkey Kong](data/donkeykong.png){ height=300px }
 :::
 
 
 
 # Numerierungen
 
-::: col50
+::: col40
 1. Donkey Kong
     - entführt Peach
 2. Mario
@@ -96,13 +119,15 @@ link-citations: true
     - findet Mario toll
 :::
 
-::: col50
+::: col60
 ![](data/donkeykong-2.png)
 :::
 
 
 
 # Task-Listen
+
+::: w80
 
 ::: {.col50 .left .check-cross}
 - Was können wir?
@@ -132,6 +157,7 @@ link-citations: true
     - [X] alle anderen
 :::
 
+:::
 
 
 # Mathe-Formeln mit [MathJax](https://www.mathjax.org/)
@@ -148,48 +174,8 @@ link-citations: true
     \label{eq:incompressibility}
   \end{eqnarray}$$
 - Formeln können schrittweise eingeblendet werden
-- Formeln können referenziert und verlinkt werden
-
-
-
-# Zeilenweises Einblenden von Gleichungen
-
-::: math-incremental
-$$
-\begin{align*}
-\dot{\mat{R}}(t) \, \bar{\vec{r}}_i 
-&=
-\diff{\mat{R}}{\alpha} \,
-\diff{\alpha}{t} \,
-\bar{\vec{r}}_i \\
-&=
-\matrix{
-	-\sin\alpha & -\cos\alpha \\ 
-	\cos\alpha & -\sin\alpha }
-\dot{\alpha} \, \bar{\vec{r}}_i \\[2mm]
-&=
-\matrix{
-	\cos(\alpha+90^\circ) & -\sin(\alpha+90^\circ) \\ 
-	\sin(\alpha+90^\circ) & \cos(\alpha+90^\circ) }
-\, \bar{\vec{r}}_i \, \dot{\alpha} \\[2mm]
-&=
-\matrix{
-	\cos(90^\circ) & -\sin(90^\circ) \\ 
-	\sin(90^\circ) & \cos(90^\circ) }
-\,
-\matrix{
-	\cos(\alpha) & -\sin(\alpha) \\ 
-	\sin(\alpha) & \cos(\alpha) }
-\, \bar{\vec{r}}_i \, \dot{\alpha} \\[2mm]
-&=
-\omega \, \vec{r}_i^\perp
-\end{align*}
-$$
-:::
-
-::: footer
-Hier der Link auf vorherige Formel: $\eqref{eq:momentum}$.
-:::
+- Formeln können referenziert und verlinkt werden\
+  (siehe nächste Folie)
 
 
 # Virtuelle Tafel
@@ -213,6 +199,9 @@ Hier der Link auf vorherige Formel: $\eqref{eq:momentum}$.
 
 :::
 
+::: footer
+Hier der Link auf Navier-Stokes-Gleichungen: $\eqref{eq:momentum}$.
+:::
 
 
 # Source Code mit [highlight.js](https://highlightjs.org/)
@@ -236,9 +225,9 @@ double  f, pi=0.0;
 
 for (i=0; i<N; ++i)
 {
-	x = (i+0.5) * dx;
-	f = 4.0 / (1.0 + x*x);
-	pi += dx * f;
+  x = (i+0.5) * dx;
+  f = 4.0 / (1.0 + x*x);
+  pi += dx * f;
 }
 
 printf("pi = %f\n", pi);
@@ -260,7 +249,7 @@ printf("pi = %f\n", pi);
 | plattformunabhängig |     😢     |      😊      |      😊     |
 | Mathe-Formelsatz    |     😢     |      😊      |      😊     |
 | Videos              |     😊     |      😢      |      😊     |
-| Studi-Export        |     😢     |      😢      |      😍     |
+| Export für Studierende |     😢     |      😢      |      😍     |
 | erweiterbar         |     😢     |      😢      |      😍     |
 | interaktiv          |     😢     |      😢      |      😍     |
 | Aufwand             |     😊     |      😢      |      😭     |
@@ -273,10 +262,11 @@ Table: Warum sind HTML-Folien so toll?
 
 - Bibliographie kann mit BibTeX verwaltet werden. 
 - Die Referenzliste wird dann automatisch erstellt (siehe nächste Folie).
+- Zitationsstil über CSL (Citation Style Language) einstellbar.
 - Hier ein Beispiel:
-    - Realistische Avatare sind toll [@waltemate2018] :thumbsup:.
-    - @achenbach2017 können sie in <10 Minuten erzeugen :astonished:.
-    - Sie können in Echtzeit animiert werden [@komaritzan2019] :muscle:.
+    - Realistische Avatare sind toll [@waltemate2018].
+    - @achenbach2017 können sie in <10 Minuten erzeugen.
+    - Sie können in Echtzeit animiert werden [@komaritzan2019].
 
 
 # Referenzen
@@ -289,7 +279,7 @@ Table: Warum sind HTML-Folien so toll?
 
 ::: col50
 - Folien lassen sich auf Knopfdruck als PDF-Dokument exportieren.
-- PDF-Dokumente lassen sich in Präsentationen einbinden
+- PDF-Dokumente lassen sich in Präsentationen einbinden.
 :::
 ::: col50
 ![](eLearning.pdf){ width=600px height=500px }
@@ -321,7 +311,7 @@ Table: Warum sind HTML-Folien so toll?
 
 # Interaktive Charts mit [chart.js](https://www.chartjs.org/)
 
-``` bar-chart
+``` { .bar-chart width=1000px }
 1.0, 1.3, 1.7, 2.0, 2.3, 2.7, 3.0, 3.3, 3.7, 4.0, 5.0
 Irgendwelche Zahlen, 5, 6, 5, 2, 3, 3, 4, 3, 3, 5, 11
 Andere Zahlen, 11, 8, 5, 5, 2, 7, 4, 1, 5, 0, 15
@@ -330,7 +320,7 @@ Andere Zahlen, 11, 8, 5, 5, 2, 7, 4, 1, 5, 0, 15
 
 # Interaktive Charts mit [chart.js](https://www.chartjs.org/)
 
-``` pie-chart
+``` { .pie-chart width=1000px }
 1.0, 1.3, 1.7, 2.0, 2.3, 2.7, 3.0, 3.3, 3.7, 4.0, 5.0
 Irgendwelche Zahlen, 5, 6, 5, 2, 3, 3, 4, 3, 3, 5, 11
 ```
@@ -338,7 +328,7 @@ Irgendwelche Zahlen, 5, 6, 5, 2, 3, 3, 4, 3, 3, 5, 11
 
 # Interaktive Charts mit [chart.js](https://www.chartjs.org/)
 
-``` { .line-chart title="Poisson-System lösen" }
+``` { .line-chart width=1000px title="Poisson-System lösen" }
 100k, 200k, 300k, 400k, 500k
 Conjugate Gradients, 3.19, 11.6, 23.6, 37.3, 47.4
 Sparse Cholesky, 0.21, 0.52, 0.83, 1.21, 1.54
@@ -474,7 +464,7 @@ plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838",
 
 # Interaktive Plots
 
-![Auf `3D Surface` klicken!](demos/plotly/plotly.html){ width=1000px height=600px .print }
+![Auf `3D Surface` klicken!](demos/plotly/plotly.html){ width=1000px height=500px .print }
 
 [Martin Heistermann, Uni Bern]{.footer}
 
@@ -482,7 +472,7 @@ plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838",
 
 # 3D-Modelle
 
-![Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren](data/amo.off){ width=800px height=550px }
+![Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren](data/amo.off){ width=800px height=500px }
 
 [[Polygon Mesh Processing Library](http://pmp-library.org)]{.footer}
 
@@ -497,17 +487,17 @@ plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838",
 
 # Interaktive Demos in Javascript
 
-![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ width=1000px height=600px .print }
+![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ .stretch .print }
 
 
 # Interaktive Demos mit [D3.js](https://d3js.org/)
 
-![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ width=1000px height=600px .print }
+![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ .stretch .print }
 
 
 # Komplexere Demos in C++
 
-![Rechte Maustaste: Flüssigkeit injizieren. Linke Maustaste: Verwirbeln](demos/fluids/fluids.html){ width=1000px height=600px }
+![Rechte Maustaste: Flüssigkeit injizieren. Linke Maustaste: Verwirbeln](demos/fluids/fluids.html){ .stretch }
 
 
 # Interaktive Mathe mit SAGE
@@ -576,7 +566,7 @@ plt.show()
 [Example from Roberto De Leo, Howard University]{.footer}
 
 
-# Interaktive Statistik mit R und SAGE
+# Interaktive Statistik mit R
 
 ::: { .sageCell .stretch .print }
 Die Trainingsdaten bestehen aus Alter und Maximalpuls als $x$- und $y$-Koordinaten.
@@ -656,13 +646,13 @@ Supermario
 [:vspace](30px)
 
 ::: quiz-mi
-Laplacian
+Laplace
 : $\laplace f$
 
 Gradient
 : $\grad f$
 
-Divergence
+Divergenz
 : $\grad \cdot f$ 
 
 Quatsch
@@ -673,26 +663,24 @@ Quatsch
 
 # Freitextaufgaben
 
-[:vspace](30px)
+[:vspace](100px)
 
-::: col40
+::: {.col40 .quiz-ft}
 ![](data/peach.png){height=150px}
-:::
-::: {.col60 .quiz-ft}
+[:vspace](30px)
 Wie heißt die Prinzessin?
 
 - [x] Peach
 - [ ] Lilifee
 :::
 
-[:vspace](50px)
-
-::: col40
-![](data/donkeykong.png){height=150px}
-![](data/supermario.png){height=150px}
-![](data/spongebob.png){height=130px}
-:::
 ::: {.col60 .quiz-ic}
+![](data/donkeykong.png){height=150px}
+[:hspace](30px)
+![](data/supermario.png){height=150px}
+[:hspace](30px)
+![](data/spongebob.png){height=130px}\
+[:vspace](40px)
 Die Prinzessin ist verliebt in 
 
 - [ ] Donkey Kong
@@ -702,10 +690,12 @@ Die Prinzessin ist verliebt in
 
 
 
+
 # Fragensammlung
 
 - Mit dem Icon <i class="fas fa-question-circle"></i> (oben rechts) können Studierende pro Folie anonym Fragen posten.
 - Die Fragen sind für alle Vorlesungsteilnehmer*innen sichtbar und können dann z.B. in einer Online-Fragestunde besprochen werden.
+- Fragen können von Lehrenden als erledigt markiert oder gelöscht werden.
 - Im Menu (Icon <i class="fas fa-bars"></i> oben links) werden die Fragen in der Folienübersicht auch angezeigt.
 
 
@@ -725,7 +715,7 @@ Die Prinzessin ist verliebt in
 
 # Open-Source "Zutatenliste"
 
-::: w80
+::: w90
 
 - [Reveal.js](https://github.com/hakimel/reveal.js/)
     - Javascript-Framework zur Darstellung von Folien im Webbrowser
