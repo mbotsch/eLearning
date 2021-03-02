@@ -3,14 +3,8 @@ title:        Probieren hilft beim Studieren
 subtitle:     Interaktive Vorlesungsfolien im Webbrowser
 author:       Prof. Dr. Mario Botsch
 affiliation:  Lehrstuhl für Computergraphik, TU Dortmund
-bibliography: bibliography.bib 
-csl:          chicago-author-date.csl
-width:        1280
-height:       720
-link-citations: true
-explain:
-  recWidth: 1920
-  recHeight: 1080
+decker-engine:
+  deck-id:  'mb-elearning-example'
 ...
 
 
@@ -63,7 +57,7 @@ explain:
 :::
 
 ::: col50
-![Videos lassen sich genauso einfach einbinden](data/donkeykong.mp4){ height=400px .controls .autoplay }
+![Videos lassen sich genauso einfach einbinden](data/donkeykong.mp4){ height=400px .controls .autoplay .muted }
 :::
 
 

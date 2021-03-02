@@ -11,14 +11,23 @@ center:               0
 transition:           'none'
 viewDistance:         2
 width:                1280
-height:               800
+height:               720
 minScale:             0.2
 maxScale:             5
 vertical-slides:      false
 
+bibliography:         bibliography.bib 
+csl:                  chicago-author-date.csl
+link-citations:       true
+
+explain:
+  recWidth: 1920
+  recHeight: 1080
+  camWidth: 1280
+  camHeight: 720
+
 decker-engine:
   base-url: 'https://tramberend.beuth-hochschule.de/decker'
-  deck-id:  'mb-elearning-example'
 
 publish:
   rsync:
