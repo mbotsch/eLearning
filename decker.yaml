@@ -20,6 +20,13 @@ bibliography:         bibliography.bib
 csl:                  chicago-author-date.csl
 link-citations:       true
 
+jingles:
+  - vid: "data/Mario-Welcome.webm"
+    css: "top:auto; right:auto"
+    vol: 0.5
+  - vid: "data/Mario-Too-Bad.webm"
+    vol: 0.5
+
 explain:
   recWidth: 1920
   recHeight: 1080

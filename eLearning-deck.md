@@ -16,7 +16,7 @@ decker-engine:
   manche interaktiven Demos nicht funktionieren.
 - **Cursor-links**/**Cursor-rechts** blättern durch Folien.
 - **f**/**ESC** schalten Fullscreen-Modus an/aus.
-- **Ctrl-Shift-f** öffnet Such-Dialog öffnen, **ESC** schließt ihn wieder.
+- **Ctrl-Shift-f** öffnet Such-Dialog, **ESC** schließt ihn wieder.
 - <i class="fas fa-bars"></i> (links oben) öffnet das Navigationsmenü.
 - <i class="fas fa-edit"></i> (links unten) schaltet das virtuelle Whiteboard an/aus.
 - <i class="fas fa-play"></i> (rechts oben) spielt aufgezeichnetes Erklärvideo (wenn vorhanden) ab.
@@ -35,7 +35,7 @@ decker-engine:
   - Video springt automatisch an die Stelle, wo die aktuelle Folie erklärt wird.
   - **Cursor-links**/**Cursor-rechts** springt im Video folien-weise vor/zurück.
   - **Space** oder **Maus-Klick** pausiert das Video.
-  - Abspielgeschwindigkeit lässt sich einstellen (von halber bis doppelte Geschwinditkeit).
+  - Abspielgeschwindigkeit lässt sich einstellen (von halber bis zu doppelter Geschwindigkeit).
   - Beenden des Videos springt automatisch auf die zuletzt erklärte Folie.
 - Erklärvideos aufnehmen:
   - Videos können direkt in den HTML-Folien aufgenommen werden.
