@@ -26,6 +26,8 @@ jingles:
     vol: 0.5
   - vid: "data/Mario-Too-Bad.webm"
     vol: 0.5
+  - vid: "data/Mario-Time-Up.webm"
+    vol: 0.5
 
 explain:
   recWidth: 1920
