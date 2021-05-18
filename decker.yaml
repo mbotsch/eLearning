@@ -34,6 +34,8 @@ explain:
   recHeight: 1080
   camWidth: 1280
   camHeight: 720
+  useGreenScreen: true
+  greenScreenBackground: 'data/background.jpg'
 
 decker-engine:
   base-url: 'https://tramberend.beuth-hochschule.de/decker'
