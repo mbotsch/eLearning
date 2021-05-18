@@ -36,6 +36,9 @@ explain:
   camHeight: 720
   useGreenScreen: true
   greenScreenBackground: 'data/background.jpg'
+  greenScreenKey: { r: 0, g: 255, b: 0 }
+  greenScreenSimilarity: 0.4
+  greenScreenSmoothness: 0.08
 
 decker-engine:
   base-url: 'https://tramberend.beuth-hochschule.de/decker'
