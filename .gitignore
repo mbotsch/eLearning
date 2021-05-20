@@ -1,0 +1,7 @@
+.DS_Store
+.decker
+public
+dist
+fit.log
+*-recording.*
+*-times.json
