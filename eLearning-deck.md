@@ -16,7 +16,7 @@ decker-engine:
   manche interaktiven Demos nicht funktionieren.
 - **Cursor-links**/**Cursor-rechts** blättern durch Folien.
 - **f**/**ESC** schalten Fullscreen-Modus an/aus.
-- **Ctrl-Shift-f** öffnet Such-Dialog, **ESC** schließt ihn wieder.
+- **Ctrl/Cmd-f** öffnet Such-Dialog, **ESC** schließt ihn wieder.
 - <i class="fas fa-bars"></i> (links oben) öffnet das Navigationsmenü.
 - <i class="fas fa-edit"></i> (links unten) schaltet das virtuelle Whiteboard an/aus.
 - <i class="fas fa-play"></i> (rechts oben) spielt aufgezeichnetes Erklärvideo (wenn vorhanden) ab.
