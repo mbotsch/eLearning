@@ -35,7 +35,8 @@ explain:
   camWidth: 1280
   camHeight: 720
   useGreenScreen: true
-  greenScreenBackground: 'data/background.jpg'
+  # greenScreenBackground: 'data/background.jpg'
+  greenScreenBackground: 'data/matrix-background.gif'
   greenScreenKey: { r: 0, g: 255, b: 0 }
   greenScreenSimilarity: 0.4
   greenScreenSmoothness: 0.08
