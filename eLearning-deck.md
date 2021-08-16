@@ -3,10 +3,9 @@ title:        Probieren hilft beim Studieren
 subtitle:     Interaktive Vorlesungsfolien im Webbrowser
 author:       Prof. Dr. Mario Botsch
 affiliation:  Lehrstuhl für Computergraphik, TU Dortmund
-decker-engine:
+feedback:
   deck-id:  'mb-elearning-example'
 ...
-
 
 # Anleitung für die HTML-Folien
 
@@ -314,7 +313,7 @@ Andere Zahlen, 11, 8, 5, 5, 2, 7, 4, 1, 5, 0, 15
 
 # Interaktive Charts mit [chart.js](https://www.chartjs.org/)
 
-``` { .pie-chart width=1000px }
+``` { .pie-chart width=600px }
 1.0, 1.3, 1.7, 2.0, 2.3, 2.7, 3.0, 3.3, 3.7, 4.0, 5.0
 Irgendwelche Zahlen, 5, 6, 5, 2, 3, 3, 4, 3, 3, 5, 11
 ```
@@ -326,16 +325,6 @@ Irgendwelche Zahlen, 5, 6, 5, 2, 3, 3, 4, 3, 3, 5, 11
 100k, 200k, 300k, 400k, 500k
 Conjugate Gradients, 3.19, 11.6, 23.6, 37.3, 47.4
 Sparse Cholesky, 0.21, 0.52, 0.83, 1.21, 1.54
-<!--
-{
-  "data": {
-    "datasets":[
-    { "backgroundColor": "rgba(255,255,255,0)" },    
-    { "backgroundColor": "rgba(255,255,255,0)" } 
-    ]
-  }
-}
--->
 ```
 
 

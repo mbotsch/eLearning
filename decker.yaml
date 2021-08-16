@@ -1,24 +1,19 @@
-mario:                true
-menu:                 true
-highlightjs:          xcode
-checkOverflow:        "false"
-lang:                 de
-pdfSeparateFragments: true
-controls:             "false"
-progress:             "false"
-slideNumber:          1
-center:               0
-transition:           'none'
-viewDistance:         2
-width:                1280
-height:               720
-minScale:             0.2
-maxScale:             5
-vertical-slides:      false
+# resource-pack: "./template"
+resource-pack: exe:mario
 
-bibliography:         bibliography.bib 
-csl:                  chicago-author-date.csl
-link-citations:       true
+reveal:
+  width: 1280
+  height: 720
+  checkOverflow: false
+
+explain:
+  recWidth: 1920
+  recHeight: 1080
+  camWidth: 1280
+  camHeight: 720
+  useGreenScreen: true
+  # greenScreenBackground: 'data/background.jpg'
+  greenScreenBackground: 'data/matrix-background.gif'
 
 jingles:
   - vid: "data/Mario-Welcome.webm"
@@ -29,21 +24,13 @@ jingles:
   - vid: "data/Mario-Time-Up.webm"
     vol: 0.5
 
-explain:
-  recWidth: 1920
-  recHeight: 1080
-  camWidth: 1280
-  camHeight: 720
-  useGreenScreen: true
-  # greenScreenBackground: 'data/background.jpg'
-  greenScreenBackground: 'data/matrix-background.gif'
-  greenScreenKey: { r: 0, g: 255, b: 0 }
-  greenScreenSimilarity: 0.4
-  greenScreenSmoothness: 0.08
-  greenScreenSpill: 0.1
+feedback:
+  server: 'https://tramberend.beuth-hochschule.de/decker'
 
-decker-engine:
-  base-url: 'https://tramberend.beuth-hochschule.de/decker'
+lang:                 de
+bibliography:         bibliography.bib 
+csl:                  chicago-author-date.csl
+link-citations:       true
 
 publish:
   rsync:
