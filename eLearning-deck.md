@@ -7,6 +7,7 @@ feedback:
   deck-id:  'mb-elearning-example'
 ...
 
+
 # Anleitung für die HTML-Folien
 
 ::: {.w80 .small}
@@ -26,6 +27,10 @@ feedback:
 - Wenn der untere Rand blinkt: Zum virtuellen Whiteboard **runter-scrollen**.
 :::
 
+::: notes
+Speaker Notes, hurra!
+:::
+
 
 # Videoaufzeichnungen
 
@@ -41,6 +46,9 @@ feedback:
   - Bildschirm, Kamera und Mikrophon werden aufgezeichnet.
   - Videos werden automatisch mit Folien synchronisiert.
 :::
+
+[Fußnote]{.footer}
+
 
 --------------------------------------------------------------------------------
 
@@ -136,6 +144,8 @@ feedback:
     - [ ] alles andere
 :::
 
+[:vspace](20px)
+
 ::: {.col50 .left .thumb}
 - Was ist cool?
     - [X] Mathe
@@ -200,18 +210,20 @@ Hier der Link auf Navier-Stokes-Gleichungen: $\eqref{eq:momentum}$.
 # Source Code mit [highlight.js](https://highlightjs.org/)
 
 ::: col50
-``` {.haskell .line-numbers caption="Quicksort in Haskell<br>(mit Code-Hervorhebungen)"}
+``` {.haskell .line-numbers}
 qsort []     = []
-qsort (x:xs) = <mark>qsort small ++ mid ++ qsort large</mark>
+qsort (x:xs) = qsort small ++ mid ++ qsort large
   where
     small = [y | y<-xs, y<x]
     mid   = [y | y<-xs, y==x] ++ [x]
     large = [y | y<-xs, y>x]
 ```
+Caption: Quicksort in Haskell<br>(mit Code-Hervorhebungen)
 :::
 
+
 ::: col50
-``` {.cpp line-numbers="5-10" caption="\\(\pi\\) ausrechnen in C++<br>(mit Zeilen-Hervorhebungen)"}
+``` {.cpp line-numbers="5-10" width=80%}
 int     i, N=100000000;
 double  x, dx=1.0/(double)N;
 double  f, pi=0.0;
@@ -225,13 +237,14 @@ for (i=0; i<N; ++i)
 
 printf("pi = %f\n", pi);
 ```
+Caption: $\pi$ ausrechnen in C++<br>(mit Zeilen-Hervorhebungen)
 :::
 
 
 
 # Webseiten
 
-![](https://graphics.cs.tu-dortmund.de/){ width=1000px height=600px .print .iframe }
+![](https://graphics.cs.tu-dortmund.de/){ width=1000px height=550px .print .iframe }
 
 
 
@@ -248,7 +261,6 @@ printf("pi = %f\n", pi);
 | Aufwand             |     😊     |      😢      |      😭     |
 
 Table: Warum sind HTML-Folien so toll?
-
 
 
 # Bibliographie mit BibTeX
@@ -289,16 +301,18 @@ Table: Warum sind HTML-Folien so toll?
 
 # Bild-Sequenzen
 
+::: center
 ![](data/laserMario4.jpg){ height=500px .fragment .sequence }
 ![](data/laserMario3.jpg){ height=500px .fragment .sequence }
 ![](data/laserMario2.jpg){ height=500px .fragment .sequence }
 ![](data/laserMario1.jpg){ height=500px .fragment .sequence }
+:::
 
 
 
 # Animierte Vektorgrafiken
 
-![de Casteljau Algorithmus](data/deCasteljau.svg){ .embed }
+![de Casteljau Algorithmus](data/deCasteljau.svg){ .embed width=800px }
 
 
 
@@ -313,7 +327,7 @@ Andere Zahlen, 11, 8, 5, 5, 2, 7, 4, 1, 5, 0, 15
 
 # Interaktive Charts mit [chart.js](https://www.chartjs.org/)
 
-``` { .pie-chart width=600px }
+``` { .pie-chart width=500px }
 1.0, 1.3, 1.7, 2.0, 2.3, 2.7, 3.0, 3.3, 3.7, 4.0, 5.0
 Irgendwelche Zahlen, 5, 6, 5, 2, 3, 3, 4, 3, 3, 5, 11
 ```
@@ -441,7 +455,7 @@ fit [0:2000] [0:1500] f3(x) "data/house-price-to-size.dat" via f,g,h,i
 
 plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838", f1(x) title "Test" lc "blue"  lw 3, f2(x) lc "green" lw 3,  f3(x) lc "red" lw 3
 ```
-[Marc Latoschik, Uni Würzburg]{.footer}
+Caption: Marc Latoschik, Uni Würzburg
 
 
 
@@ -470,22 +484,22 @@ plot "data/house-price-to-size.dat" with points pt 7 ps 1 lw 1 lc rgb "#F09838",
 
 # Interaktive Demos in Javascript
 
-![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ .stretch .print }
+![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ width=1000px height=500px .print }
 
 
 # Interaktive Demos mit [D3.js](https://d3js.org/)
 
-![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ .stretch .print }
+![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ width=1000px height=500px .print }
 
 
 # Komplexere Demos in C++
 
-![Rechte Maustaste: Flüssigkeit injizieren. Linke Maustaste: Verwirbeln](demos/fluids/fluids.html){ .stretch }
+![Rechte Maustaste: Flüssigkeit injizieren. Linke Maustaste: Verwirbeln](demos/fluids/fluids.html){ width=1000px height=500px  }
 
 
 # Interaktive Mathe mit SAGE
 
-::: { .sageCell .stretch .print }
+::: { .sageCell .print width=1000px height=500px }
 
 Wir definieren ein paar Punkte $\mathbf{x}_1, \dots, \mathbf{x}_6$ und verbinden sie zu einem Linienzug:
 
@@ -523,7 +537,7 @@ show(pointsPlot + curvePlot)
 
 # Interaktives Python
 
-::: { .sageCell .stretch .print }
+::: { .sageCell width=1000px height=500px  .print }
 ``` python
 from math import exp,pi,cos,sin
 import matplotlib.pyplot as plt
@@ -551,7 +565,7 @@ plt.show()
 
 # Interaktive Statistik mit R
 
-::: { .sageCell .stretch .print }
+::: { .sageCell width=1000px height=500px  .print }
 Die Trainingsdaten bestehen aus Alter und Maximalpuls als $x$- und $y$-Koordinaten.
 
 ``` rr
@@ -572,7 +586,7 @@ abline(lm(y ~ x)) # plot the regression line
 
 # Shader-Programmierung
 
-![Press `Ctrl-Enter` or `Cmd-Enter` to compile shaders](demos/webgl-shader/alpha-map.html){ .stretch }
+![Press `Ctrl-Enter` or `Cmd-Enter` to compile shaders](demos/webgl-shader/alpha-map.html){ width=1000px height=500px  }
 
 
 
@@ -588,29 +602,25 @@ abline(lm(y ~ x)) # plot the regression line
 
 # Audience Response System 
 
-![](data/peach.png){height=100px}
+::: center
 Wer bekommt am Ende die Prinzessin?
-
-::: {.quiz .w80}
-- [ ] Donkey Kong ![](data/donkeykong.png){height=100px}
-    - Nein, der ist böse!
-- [ ] Sponge Bob ![](data/spongebob.png){height=100px}
-    - Nein, der lebt unter Wasser!
-- [ ] Kleine A-Loch ![](data/arschloch.png){height=100px}
-    - Nein, den mag keiner!
-- [X] Supermario ![](data/supermario.png){height=100px} 
-    - Klar!
+![](data/peach.png){height=70px}
 :::
 
-[Hier können Vorlesungsteilnehmer*innen online abstimmen, wenn der Quiz-Server gestartet wird.]{.footer}
+::: {.quiz .w80}
+- [ ] Donkey Kong ![](data/donkeykong.png){height=70px}
+    - Nein, der ist böse!
+- [ ] Sponge Bob ![](data/spongebob.png){height=70px}
+    - Nein, der lebt unter Wasser!
+- [ ] Kleine A-Loch ![](data/arschloch.png){height=70px}
+    - Nein, den mag keiner!
+- [X] Supermario ![](data/supermario.png){height=70px} 
+    - Klar!
+:::
 
 
 
 # Zuordnungsaufgaben
-
-"Who is who" per Drag&Drop zuordnen
-
-[:vspace](30px)
 
 ::: quiz-mi
 Prinzessin
@@ -625,8 +635,6 @@ Supermario
 
 
 # Zuordnungsaufgaben
-
-[:vspace](30px)
 
 ::: quiz-mi
 Laplace
@@ -648,7 +656,7 @@ Quatsch
 
 [:vspace](100px)
 
-::: {.col40 .quiz-ft}
+::: {.col40 .center .quiz-ft}
 ![](data/peach.png){height=150px}
 [:vspace](30px)
 Wie heißt die Prinzessin?
@@ -657,7 +665,7 @@ Wie heißt die Prinzessin?
 - [ ] Lilifee
 :::
 
-::: {.col60 .quiz-ic}
+::: {.col60 .center .quiz-ic}
 ![](data/donkeykong.png){height=150px}
 [:hspace](30px)
 ![](data/supermario.png){height=150px}
@@ -692,7 +700,7 @@ Die Prinzessin ist verliebt in
 
 # Von Markdown zu HTML
 
-![](data/pipeline.svg){ .embed }
+![](data/pipeline.svg){ .embed width=90% }
 
 
 

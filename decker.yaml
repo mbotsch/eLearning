@@ -1,10 +1,11 @@
-# resource-pack: "./template"
-resource-pack: exe:mario
+resource-pack: "./template"
+# resource-pack: exe:mario
 
 reveal:
   width: 1280
   height: 720
   checkOverflow: false
+  overview: true
 
 explain:
   recWidth: 1920
@@ -13,7 +14,7 @@ explain:
   camHeight: 720
   useGreenScreen: true
   # greenScreenBackground: 'data/background.jpg'
-  greenScreenBackground: 'data/matrix-background.gif'
+  greenScreenBackground: "data/matrix-background.gif"
 
 jingles:
   - vid: "data/Mario-Welcome.webm"
@@ -25,23 +26,24 @@ jingles:
     vol: 0.5
 
 feedback:
-  server: 'https://tramberend.beuth-hochschule.de/decker'
+  server: "https://tramberend.bht-berlin.de/decker"
 
-lang:                 de
-bibliography:         bibliography.bib 
-csl:                  chicago-author-date.csl
-link-citations:       true
+poll-server: wss://tramberend.bht-berlin.de/quizzer/quiz
+
+lang: de
+bibliography: bibliography.bib
+csl: chicago-author-date.csl
+link-citations: true
 
 publish:
   rsync:
-      destination: '/Users/botsch/www/downloads/elearning'
-      options: '-av'
+    destination: "/Users/botsch/www/downloads/elearning"
+    options: "-av"
 
-exclude-directories:
-- code
-- log
-- public
+static-resource-dirs*:
+  - data
+  - demos
 
-static-resource-dirs:
-- data
-- demos
+exclude-directories*:
+  - code
+  - public
