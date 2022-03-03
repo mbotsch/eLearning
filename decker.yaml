@@ -1,5 +1,6 @@
-resource-pack: "./template"
-# resource-pack: exe:mario
+# resource-pack: "./tudo"
+# resource-pack: "./template"
+resource-pack: exe:mario
 
 reveal:
   width: 1280
