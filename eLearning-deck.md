@@ -10,10 +10,7 @@ feedback:
 
 # Anleitung für die HTML-Folien
 
-::: {.w80 .small}
-- Am besten Google Chrome oder Firefox verwenden. 
-  Apple's Safari implementiert nicht alle benötigen Web-Standards, so dass
-  manche interaktiven Demos nicht funktionieren.
+::: {.col80 .small}
 - **Cursor-links**/**Cursor-rechts** blättern durch Folien.
 - **f**/**ESC** schalten Fullscreen-Modus an/aus.
 - **Ctrl/Cmd-f** öffnet Such-Dialog, **ESC** schließt ihn wieder.
@@ -52,10 +49,9 @@ Speaker Notes, hurra!
 
 --------------------------------------------------------------------------------
 
-# Features der HTML-Folien {.section}
+# Features der HTML-Folien
 
 --------------------------------------------------------------------------------
-
 
 # Bilder und Videos
 
@@ -71,7 +67,7 @@ Speaker Notes, hurra!
 
 # Aufzählungen
 
-::: col50
+::: col40
 ::: incremental
 - Mario
     - Der Held
@@ -92,7 +88,7 @@ Speaker Notes, hurra!
 
 # Textauszeichnungen
 
-::: col50
+::: col40
 - **Mario**
     - ist fett (gedruckt)
 - Prinzessin ^Peach^
@@ -125,10 +121,7 @@ Speaker Notes, hurra!
 :::
 
 
-
 # Task-Listen
-
-::: w80
 
 ::: {.col50 .left .check-cross}
 - Was können wir?
@@ -144,7 +137,7 @@ Speaker Notes, hurra!
     - [ ] alles andere
 :::
 
-[:vspace](20px)
+[:vspace](30px)
 
 ::: {.col50 .left .thumb}
 - Was ist cool?
@@ -158,8 +151,6 @@ Speaker Notes, hurra!
     - [X] Mathe
     - [X] Informatik
     - [X] alle anderen
-:::
-
 :::
 
 
@@ -294,7 +285,7 @@ Table: Warum sind HTML-Folien so toll?
 
 --------------------------------------------------------------------------------
 
-# Statische und dynamische Visualisierungen {.section}
+# Statische und dynamische Visualisierungen
 
 --------------------------------------------------------------------------------
 
@@ -477,14 +468,14 @@ Caption: Marc Latoschik, Uni Würzburg
 
 --------------------------------------------------------------------------------
 
-# Interaktive Demos {.section}
+# Interaktive Demos
 
 --------------------------------------------------------------------------------
 
 
 # Interaktive Demos in Javascript
 
-![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ width=1000px height=500px .print }
+![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ width=1000px height=500px .print css:border="2px solid red" }
 
 
 # Interaktive Demos mit [D3.js](https://d3js.org/)
@@ -590,14 +581,9 @@ abline(lm(y ~ x)) # plot the regression line
 
 
 
-# Quizzes und Selbstlernphase {.section}
+# Quizzes und Selbstlernphase
 
 
-
-<!-- # Audience Response System
-
-<div id="quiz-qr" style="width:500px; margin:auto"></div>
-<p id="quiz-url"></p> -->
 
 
 # Audience Response System 
@@ -693,7 +679,7 @@ Die Prinzessin ist verliebt in
 
 --------------------------------------------------------------------------------
 
-# Folienerstellung {.section}
+# Folienerstellung
 
 --------------------------------------------------------------------------------
 
