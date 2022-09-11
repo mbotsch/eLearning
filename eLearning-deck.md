@@ -492,7 +492,7 @@ Caption: Marc Latoschik, Uni Würzburg
 
 # Interaktive Mathe mit SAGE
 
-::: { .sageCell .print width=100% height=500px }
+::: { .sageCell .print width=1200px height=500px }
 
 Wir definieren ein paar Punkte $\mathbf{x}_1, \dots, \mathbf{x}_6$ und verbinden sie zu einem Linienzug:
 
@@ -530,7 +530,7 @@ show(pointsPlot + curvePlot)
 
 # Interaktives Python
 
-::: { .sageCell width=100% height=500px  .print }
+::: { .sageCell width=1200px height=500px  .print }
 ``` python
 from math import exp,pi,cos,sin
 import matplotlib.pyplot as plt
@@ -558,7 +558,7 @@ plt.show()
 
 # Interaktive Statistik mit R
 
-::: { .sageCell width=100% height=500px  .print }
+::: { .sageCell width=1200px height=500px  .print }
 Die Trainingsdaten bestehen aus Alter und Maximalpuls als $x$- und $y$-Koordinaten.
 
 ``` rr
@@ -579,7 +579,7 @@ abline(lm(y ~ x)) # plot the regression line
 
 # Shader-Programmierung
 
-![Press `Ctrl-Enter` or `Cmd-Enter` to compile shaders](demos/webgl-shader/alpha-map.html){ width=100% height=500px  }
+![Press `Ctrl-Enter` or `Cmd-Enter` to compile shaders](demos/webgl-shader/alpha-map.html){ width=1200px height=500px  }
 
 
 

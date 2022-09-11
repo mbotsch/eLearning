@@ -25,6 +25,7 @@ jingles:
     vol: 0.5
 
 math:
+  scale: 1.0
   macros:
     R: '{\mathbb{R}}'
     eps: '{\varepsilon}'
@@ -59,6 +60,3 @@ publish:
 static-resource-dirs:
   - data
   - demos
-
-math:
-  scale: 1.0
