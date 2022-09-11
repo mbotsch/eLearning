@@ -10,7 +10,7 @@ feedback:
 
 # Anleitung für die HTML-Folien
 
-::: {.col80 .small}
+::: small
 - **Cursor-links**/**Cursor-rechts** blättern durch Folien.
 - **f**/**ESC** schalten Fullscreen-Modus an/aus.
 - **Ctrl/Cmd-f** öffnet Such-Dialog, **ESC** schließt ihn wieder.
@@ -44,7 +44,6 @@ Speaker Notes, hurra!
   - Videos werden automatisch mit Folien synchronisiert.
 :::
 
-[Fußnote]{.footer}
 
 
 --------------------------------------------------------------------------------
@@ -55,107 +54,110 @@ Speaker Notes, hurra!
 
 # Bilder und Videos
 
-::: col50
+::: columns-50-50
+
 ![Bilder lassen sich einfach einbinden](data/arcarde.png){ height=400px }
-:::
 
-::: col50
 ![Videos lassen sich genauso einfach einbinden](data/donkeykong.mp4){ height=400px .controls .autoplay .muted }
-:::
 
+:::
 
 
 # Aufzählungen
 
-::: col40
-::: incremental
+::: columns-40-50
+
+:::: incremental
 - Mario
     - Der Held
 - Peach
     - Die Prinzessin
 - Donkey Kong
     - Der Böse
-:::
-:::
+::::
 
-::: col50
+:::: pics
 ![Mario](data/supermario.png){ height=180px }
 ![Peach](data/peach.png){      height=220px }
 ![Donkey Kong](data/donkeykong.png){ height=300px }
-:::
+::::
 
+:::
 
 
 # Textauszeichnungen
 
-::: col40
+::: columns-40-50
+
 - **Mario**
     - ist fett (gedruckt)
 - Prinzessin ^Peach^
     - ist hochgestellt
 - *Donkey Kong*
     - ist schräg
-:::
 
-::: col50
+:::: pics
 ![Mario](data/supermario.png){ height=180px }
 ![Peach](data/peach.png){      height=220px }
 ![Donkey Kong](data/donkeykong.png){ height=300px }
+::::
+
 :::
 
 
+# Nummerierungen
 
-# Numerierungen
+::: columns-30-50
 
-::: col40
 1. Donkey Kong
     - entführt Peach
 2. Mario
     - rettet Peach
 3. Peach
     - findet Mario toll
-:::
 
-::: col60
-![](data/donkeykong-2.png)
+![](data/donkeykong-2.png){ width=500px }
+
 :::
 
 
 # Task-Listen
 
-::: {.col50 .left .check-cross}
+::: columns-1-1
+
+:::: check-cross
 - Was können wir?
     - [X] Mathe
     - [X] Informatik
     - [ ] alles andere
-:::
+::::
 
-::: {.col50 .left .plus-minus}
+:::: plus-minus
 - Stärken/Schwächen?
     - [X] Mathe
     - [X] Informatik
     - [ ] alles andere
-:::
+::::
 
-[:vspace](30px)
-
-::: {.col50 .left .thumb}
+:::: thumb
 - Was ist cool?
     - [X] Mathe
     - [X] Informatik
     - [ ] alles andere
-:::
+::::
 
-::: {.col50 .left}
+:::: bla
 - Wer braucht mehr :moneybag:?
     - [X] Mathe
     - [X] Informatik
     - [X] alle anderen
-:::
+::::
 
+:::
 
 # Mathe-Formeln mit [MathJax](https://www.mathjax.org/)
 
+::: incremental
 - Navier-Stokes-Gleichungen
   $$\begin{eqnarray}
     \dot{\vec{u}} &=& 
@@ -170,6 +172,7 @@ Speaker Notes, hurra!
 - Formeln können schrittweise eingeblendet werden
 - Formeln können referenziert und verlinkt werden\
   (siehe nächste Folie)
+:::
 
 
 # Virtuelle Tafel
@@ -200,7 +203,8 @@ Hier der Link auf Navier-Stokes-Gleichungen: $\eqref{eq:momentum}$.
 
 # Source Code mit [highlight.js](https://highlightjs.org/)
 
-::: col50
+::: columns-50-50
+
 ``` {.haskell .line-numbers}
 qsort []     = []
 qsort (x:xs) = qsort small ++ mid ++ qsort large
@@ -209,11 +213,9 @@ qsort (x:xs) = qsort small ++ mid ++ qsort large
     mid   = [y | y<-xs, y==x] ++ [x]
     large = [y | y<-xs, y>x]
 ```
-Caption: Quicksort in Haskell<br>(mit Code-Hervorhebungen)
-:::
+Caption: Quicksort in Haskell
 
 
-::: col50
 ``` {.cpp line-numbers="5-10" width=80%}
 int     i, N=100000000;
 double  x, dx=1.0/(double)N;
@@ -228,7 +230,8 @@ for (i=0; i<N; ++i)
 
 printf("pi = %f\n", pi);
 ```
-Caption: $\pi$ ausrechnen in C++<br>(mit Zeilen-Hervorhebungen)
+Caption: $\pi$ ausrechnen in C++
+
 :::
 
 
@@ -273,11 +276,10 @@ Table: Warum sind HTML-Folien so toll?
 
 # PDF-Unterstützung
 
-::: col50
+::: columns-50-50
 - Folien lassen sich auf Knopfdruck als PDF-Dokument exportieren.
 - PDF-Dokumente lassen sich in Präsentationen einbinden.
-:::
-::: col50
+
 ![](eLearning.pdf){ width=600px height=500px }
 :::
 
@@ -292,11 +294,11 @@ Table: Warum sind HTML-Folien so toll?
 
 # Bild-Sequenzen
 
-::: center
-![](data/laserMario4.jpg){ height=500px .fragment .sequence }
-![](data/laserMario3.jpg){ height=500px .fragment .sequence }
-![](data/laserMario2.jpg){ height=500px .fragment .sequence }
-![](data/laserMario1.jpg){ height=500px .fragment .sequence }
+::: r-stack
+![](data/laserMario4.jpg){ height=500px .fragment }
+![](data/laserMario3.jpg){ height=500px .fragment }
+![](data/laserMario2.jpg){ height=500px .fragment }
+![](data/laserMario1.jpg){ height=500px .fragment }
 :::
 
 
@@ -490,7 +492,7 @@ Caption: Marc Latoschik, Uni Würzburg
 
 # Interaktive Mathe mit SAGE
 
-::: { .sageCell .print width=1000px height=500px }
+::: { .sageCell .print width=100% height=500px }
 
 Wir definieren ein paar Punkte $\mathbf{x}_1, \dots, \mathbf{x}_6$ und verbinden sie zu einem Linienzug:
 
@@ -528,7 +530,7 @@ show(pointsPlot + curvePlot)
 
 # Interaktives Python
 
-::: { .sageCell width=1000px height=500px  .print }
+::: { .sageCell width=100% height=500px  .print }
 ``` python
 from math import exp,pi,cos,sin
 import matplotlib.pyplot as plt
@@ -556,7 +558,7 @@ plt.show()
 
 # Interaktive Statistik mit R
 
-::: { .sageCell width=1000px height=500px  .print }
+::: { .sageCell width=100% height=500px  .print }
 Die Trainingsdaten bestehen aus Alter und Maximalpuls als $x$- und $y$-Koordinaten.
 
 ``` rr
@@ -577,7 +579,7 @@ abline(lm(y ~ x)) # plot the regression line
 
 # Shader-Programmierung
 
-![Press `Ctrl-Enter` or `Cmd-Enter` to compile shaders](demos/webgl-shader/alpha-map.html){ width=1000px height=500px  }
+![Press `Ctrl-Enter` or `Cmd-Enter` to compile shaders](demos/webgl-shader/alpha-map.html){ width=100% height=500px  }
 
 
 
@@ -640,18 +642,18 @@ Quatsch
 
 # Freitextaufgaben
 
-[:vspace](100px)
+::: columns-50-50
 
-::: {.col40 .center .quiz-ft}
+:::: {.center .quiz-ft}
 ![](data/peach.png){height=150px}
 [:vspace](30px)
 Wie heißt die Prinzessin?
 
 - [x] Peach
 - [ ] Lilifee
-:::
+::::
 
-::: {.col60 .center .quiz-ic}
+:::: {.center .quiz-ic}
 ![](data/donkeykong.png){height=150px}
 [:hspace](30px)
 ![](data/supermario.png){height=150px}
@@ -663,8 +665,9 @@ Die Prinzessin ist verliebt in
 - [ ] Donkey Kong
 - [x] Supermario
 - [ ] Sponge Bob
-:::
+::::
 
+:::
 
 
 

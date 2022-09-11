@@ -1,10 +1,11 @@
-# resource-pack: "./template"
-resource-pack: exe:mario
+resource-pack: exe:tudo
+# resource-pack: ./tudo
 
 reveal:
   width: 1280
   height: 720
   checkOverflow: false
+  center: true
 
 explain:
   recWidth: 1920
@@ -22,6 +23,23 @@ jingles:
     vol: 0.5
   - vid: "data/Mario-Time-Up.webm"
     vol: 0.5
+
+math:
+  macros:
+    R: '{\mathbb{R}}'
+    eps: '{\varepsilon}'
+    laplace: '{\Delta}'
+    grad: '{\nabla}'
+    T: '^{\mathsf{T}}'
+    abs: ['\left\vert #1 \right\vert', 1]
+    norm: ['\left\Vert #1 \right\Vert', 1]
+    vec: ['{\mathbf{#1}}', 1]
+    mat: ['{\mathbf{#1}}', 1]
+    set: ['{\mathcal{#1}}', 1]
+    func: ['\mathrm{#1}', 1]
+    matrix: ['\begin{pmatrix} #1 \end{pmatrix}', 1]
+    vector: ['\begin{pmatrix} #1 \end{pmatrix}', 1]
+    of: ['{\left( #1 \right)}', 1]
 
 feedback:
   server: "https://tramberend.bht-berlin.de/decker"
