@@ -1,0 +1,24 @@
+
+---
+title: Generated Index
+subtitle: /Users/botsch/git/slides/eLearning
+---
+``` {.javascript .run}
+import("./" + Decker.meta.supportPath + "/js/search.js")
+    .then(module => console.log(module.default(anchor, 0.6)));
+```
+# Slide decks
+
+## public:
+-    [eLearning-deck.html <i class='fab fa-html5'></i>](eLearning-deck.html)
+
+# Handouts
+
+## public:
+-    [eLearning-handout.html <i class='fab fa-html5'></i>](eLearning-handout.html)
+
+# Supporting Documents
+
+# Questions
+
+        
