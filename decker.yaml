@@ -43,9 +43,9 @@ math:
     of: ['{\left( #1 \right)}', 1]
 
 feedback:
-  server: "https://tramberend.bht-berlin.de/decker"
+  base-url: 'https://decker.cs.tu-dortmund.de/feedback'
 
-poll-server: wss://tramberend.bht-berlin.de/quizzer/quiz
+poll-server: 'wss://decker.cs.tu-dortmund.de/quizzer/quiz' 
 
 lang: de
 bibliography: bibliography.bib
