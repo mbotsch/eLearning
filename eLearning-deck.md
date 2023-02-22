@@ -490,6 +490,11 @@ Caption: Marc Latoschik, Uni Würzburg
 ![Rechte Maustaste: Flüssigkeit injizieren. Linke Maustaste: Verwirbeln](demos/fluids/fluids.html){ width=1000px height=500px  }
 
 
+# Interaktive Mathe mit Geogebra
+
+![Mandelbrot ist lecker!](demos/geogebra/mandelbrot.ggb){ width=600px height=500px app-width=900 app-height=700 }
+
+
 # Interaktive Mathe mit SAGE
 
 ::: { .sageCell .print width=1200px height=500px }
@@ -575,6 +580,16 @@ lm(y ~ x) # do the linear regression
 abline(lm(y ~ x)) # plot the regression line
 ```
 :::
+
+
+# JupyterLite 1
+
+![](demos/jupyterlite/index.html){ .iframe width=1000px height=500px }
+
+
+# JupyterLite 2
+
+![](demos/jupyterlite/repl/index.html?kernel=python){ .iframe width=1000px height=500px }
 
 
 # Shader-Programmierung

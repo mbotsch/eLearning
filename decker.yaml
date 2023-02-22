@@ -1,5 +1,9 @@
 resource-pack: exe:tudo
 
+template:
+  deck:
+    css: style.css
+
 reveal:
   width: 1280
   height: 720
@@ -44,7 +48,10 @@ math:
 feedback:
   base-url: 'https://decker.cs.tu-dortmund.de/feedback'
 
-poll-server: 'wss://decker.cs.tu-dortmund.de/quizzer/quiz' 
+polling:
+  server: 'wss://tramberend.bht-berlin.de/quizzer/quiz'
+  # server: 'wss://decker.cs.tu-dortmund.de/quizzer/quiz' 
+  # selection: "Random"
 
 lang: de
 bibliography: bibliography.bib
@@ -53,8 +60,10 @@ link-citations: true
 
 publish:
   rsync:
-    destination: "/Users/botsch/www/downloads/elearning"
-    options: "-av"
+    destination: botsch@zelos.cs.tu-dortmund.de:/srv/www/downloads/elearning/
+    options:
+      - '--delete'
+      - '--delete-excluded'
 
 static-resource-dirs:
   - data
