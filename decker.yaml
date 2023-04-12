@@ -1,5 +1,7 @@
 resource-pack: exe:tudo
 
+lang: de
+
 template:
   deck:
     css: style.css
@@ -51,16 +53,15 @@ feedback:
 polling:
   server: 'wss://tramberend.bht-berlin.de/quizzer/quiz'
   # server: 'wss://decker.cs.tu-dortmund.de/quizzer/quiz' 
-  # selection: "Random"
+  selection: "Random"
 
-lang: de
 bibliography: bibliography.bib
 csl: chicago-author-date.csl
 link-citations: true
 
 publish:
   rsync:
-    destination: botsch@zelos.cs.tu-dortmund.de:/srv/www/downloads/elearning/
+    destination: botsch@zelos.cs.tu-dortmund.de:/srv/www/downloads/elearning/slides/
     options:
       - '--delete'
       - '--delete-excluded'

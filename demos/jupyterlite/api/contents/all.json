@@ -1,0 +1,37 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2023-02-24T19:44:29.832950Z",
+      "format": null,
+      "last_modified": "2023-02-24T19:44:23.410564Z",
+      "mimetype": null,
+      "name": "mario.ipynb",
+      "path": "mario.ipynb",
+      "size": 150030,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2023-02-24T19:19:05.832381Z",
+      "format": null,
+      "last_modified": "2023-02-24T19:14:41.332725Z",
+      "mimetype": "image/png",
+      "name": "mario.png",
+      "path": "mario.png",
+      "size": 251265,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2023-02-24T19:44:29.832671Z",
+  "format": "json",
+  "last_modified": "2023-02-24T19:44:29.832671Z",
+  "mimetype": null,
+  "name": "",
+  "path": "",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

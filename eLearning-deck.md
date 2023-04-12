@@ -31,7 +31,6 @@ Speaker Notes, hurra!
 
 # Videoaufzeichnungen
 
-::: incremental
 - Erklärvideos abspielen:
   - Video springt automatisch an die Stelle, wo die aktuelle Folie erklärt wird.
   - **Cursor-links**/**Cursor-rechts** springt im Video folien-weise vor/zurück.
@@ -42,7 +41,6 @@ Speaker Notes, hurra!
   - Videos können direkt in den HTML-Folien aufgenommen werden.
   - Bildschirm, Kamera und Mikrophon werden aufgezeichnet.
   - Videos werden automatisch mit Folien synchronisiert.
-:::
 
 
 
@@ -216,7 +214,7 @@ qsort (x:xs) = qsort small ++ mid ++ qsort large
 Caption: Quicksort in Haskell
 
 
-``` {.cpp line-numbers="5-10" width=80%}
+``` {.cpp line-numbers="5-10" }
 int     i, N=100000000;
 double  x, dx=1.0/(double)N;
 double  f, pi=0.0;
@@ -238,7 +236,7 @@ Caption: $\pi$ ausrechnen in C++
 
 # Webseiten
 
-![](https://graphics.cs.tu-dortmund.de/){ width=1000px height=550px .print .iframe }
+![](https://ls7-gv.cs.tu-dortmund.de/){ width=1000px height=550px .print .iframe }
 
 
 
@@ -294,7 +292,7 @@ Table: Warum sind HTML-Folien so toll?
 
 # Bild-Sequenzen
 
-::: r-stack
+::: stack
 ![](data/laserMario4.jpg){ height=500px .fragment }
 ![](data/laserMario3.jpg){ height=500px .fragment }
 ![](data/laserMario2.jpg){ height=500px .fragment }
