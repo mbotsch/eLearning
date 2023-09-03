@@ -300,6 +300,10 @@ Table: Warum sind HTML-Folien so toll?
 :::
 
 
+# ![](data/laserMario1.jpg){}
+
+[Hier ist ein Bild im Fullscreen-Modus]{.bubble}
+
 
 # Animierte Vektorgrafiken
 
@@ -580,19 +584,19 @@ abline(lm(y ~ x)) # plot the regression line
 :::
 
 
-# JupyterLite 1
+<!-- # JupyterLite 1
 
 ![](demos/jupyterlite/index.html){ .iframe width=1000px height=500px }
 
 
 # JupyterLite 2
 
-![](demos/jupyterlite/repl/index.html?kernel=python){ .iframe width=1000px height=500px }
+![](demos/jupyterlite/repl/index.html?kernel=python){ .iframe width=1000px height=500px } -->
 
 
-# Shader-Programmierung
+<!-- # Shader-Programmierung
 
-![Press `Ctrl-Enter` or `Cmd-Enter` to compile shaders](demos/webgl-shader/alpha-map.html){ width=1200px height=500px  }
+![Press `Ctrl-Enter` or `Cmd-Enter` to compile shaders](demos/webgl-shader/alpha-map.html){ width=1200px height=500px  } -->
 
 
 
@@ -714,7 +718,7 @@ Die Prinzessin ist verliebt in
     - Javascript-Framework zur Darstellung von Folien im Webbrowser
 - [Pandoc](https://pandoc.org/)
     - Tool/Bibliothek zur Konvertierung von Markdown in Reveal.js-Folien.
-- [decker](https://gitlab2.informatik.uni-wuerzburg.de/decker/decker)
+- [decker](https://github.com/decker-edu/decker)
     - `decker` basiert auf `pandoc` und übersetzt Markdown in HTML-Folien.
     - Es erweitert `pandoc` und `reveal.js` um zusätzliche Filter und Plugins.
     - Wird entwickelt von 

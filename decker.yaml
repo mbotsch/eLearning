@@ -2,10 +2,6 @@ resource-pack: exe:tudo
 
 lang: de
 
-template:
-  deck:
-    css: style.css
-
 reveal:
   width: 1280
   height: 720
@@ -19,15 +15,6 @@ explain:
   camHeight: 720
   useGreenScreen: true
   greenScreenBackground: 'data/background.jpg'
-
-jingles:
-  - vid: "data/Mario-Welcome.webm"
-    css: "top:auto; right:auto"
-    vol: 0.5
-  - vid: "data/Mario-Too-Bad.webm"
-    vol: 0.5
-  - vid: "data/Mario-Time-Up.webm"
-    vol: 0.5
 
 math:
   scale: 1.0
@@ -46,13 +33,14 @@ math:
     matrix: ['\begin{pmatrix} #1 \end{pmatrix}', 1]
     vector: ['\begin{pmatrix} #1 \end{pmatrix}', 1]
     of: ['{\left( #1 \right)}', 1]
+    pt: ['\boldsymbol{#1}', 1]
 
 feedback:
   base-url: 'https://decker.cs.tu-dortmund.de/feedback'
 
 polling:
-  server: 'wss://tramberend.bht-berlin.de/quizzer/quiz'
-  # server: 'wss://decker.cs.tu-dortmund.de/quizzer/quiz' 
+  # server: 'wss://tramberend.bht-berlin.de/quizzer/quiz'
+  server: 'wss://decker.cs.tu-dortmund.de/quizzer/quiz' 
   selection: "Random"
 
 bibliography: bibliography.bib
@@ -66,6 +54,6 @@ publish:
       - '--delete'
       - '--delete-excluded'
 
-static-resource-dirs:
+static-resources:
   - data
   - demos
