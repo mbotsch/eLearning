@@ -8,6 +8,10 @@ reveal:
   checkOverflow: false
   center: true
 
+template:
+  deck:
+    css: style.css
+
 explain:
   recWidth: 1920
   recHeight: 1080

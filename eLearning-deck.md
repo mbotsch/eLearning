@@ -61,6 +61,16 @@ Speaker Notes, hurra!
 :::
 
 
+# ![](data/laserMario1.jpg){} {.sub}
+
+[Hier ist ein Bild im Fullscreen-Modus als Sub-Slide]{.bubble}
+
+
+# ![](data/donkeykong.mp4){ .muted } {.sub}
+
+[Hier ist ein Video im Fullscreen-Modus als Sub-Slide]{.bubble}
+
+
 # Aufzählungen
 
 ::: columns-40-50
@@ -199,26 +209,32 @@ Hier der Link auf Navier-Stokes-Gleichungen: $\eqref{eq:momentum}$.
 :::
 
 
-# Source Code mit [highlight.js](https://highlightjs.org/)
+
+# Source Code
 
 ::: columns-50-50
 
-``` {.haskell .line-numbers}
-qsort []     = []
-qsort (x:xs) = qsort small ++ mid ++ qsort large
-  where
-    small = [y | y<-xs, y<x]
-    mid   = [y | y<-xs, y==x] ++ [x]
-    large = [y | y<-xs, y>x]
+``` python
+for i in range(1, 100):
+    if i % 3 is 0 and i % 5 is 0:
+        print("Fizz Buzz!")
+    elif i % 3 is 0:
+        print("Fizz!")
+    elif i % 5 is 0:
+        print("Buzz!")
+    else:
+        print(i)
+}
 ```
-Caption: Quicksort in Haskell
+Caption: Irgendwas in Python
 
 
-``` {.cpp line-numbers="5-10" }
+``` {.cpp .line-numbers }
 int     i, N=100000000;
 double  x, dx=1.0/(double)N;
 double  f, pi=0.0;
 
+// wow, ein Schleife
 for (i=0; i<N; ++i)
 {
   x = (i+0.5) * dx;
@@ -232,6 +248,7 @@ Caption: $\pi$ ausrechnen in C++
 
 :::
 
+Inline-Code: `for (int i=0; i<100; ++i) sum += i;`{.cpp} Das ist toll!
 
 
 # Webseiten
@@ -300,11 +317,6 @@ Table: Warum sind HTML-Folien so toll?
 :::
 
 
-# ![](data/laserMario1.jpg){}
-
-[Hier ist ein Bild im Fullscreen-Modus]{.bubble}
-
-
 # Animierte Vektorgrafiken
 
 ![de Casteljau Algorithmus](data/deCasteljau.svg){ .embed width=800px }
@@ -313,7 +325,7 @@ Table: Warum sind HTML-Folien so toll?
 
 # Interaktive Charts mit [chart.js](https://www.chartjs.org/)
 
-``` { .bar-chart width=1000px }
+``` { .bar-chart width=1000px height=400px }
 1.0, 1.3, 1.7, 2.0, 2.3, 2.7, 3.0, 3.3, 3.7, 4.0, 5.0
 Irgendwelche Zahlen, 5, 6, 5, 2, 3, 3, 4, 3, 3, 5, 11
 Andere Zahlen, 11, 8, 5, 5, 2, 7, 4, 1, 5, 0, 15
@@ -330,7 +342,7 @@ Irgendwelche Zahlen, 5, 6, 5, 2, 3, 3, 4, 3, 3, 5, 11
 
 # Interaktive Charts mit [chart.js](https://www.chartjs.org/)
 
-``` { .line-chart width=1000px title="Poisson-System lösen" }
+``` { .line-chart width=800px height=400px title="Poisson-System lösen" }
 100k, 200k, 300k, 400k, 500k
 Conjugate Gradients, 3.19, 11.6, 23.6, 37.3, 47.4
 Sparse Cholesky, 0.21, 0.52, 0.83, 1.21, 1.54
@@ -454,19 +466,19 @@ Caption: Marc Latoschik, Uni Würzburg
 
 
 
-# Interaktive Plots
+# 3D-Modelle
 
-![Auf `3D Surface` klicken!](demos/plotly/plotly.html){ width=1000px height=500px .print }
+![Caption: Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren](data/amo.off){ width=800px height=500px .print }
 
-[Martin Heistermann, Uni Bern]{.footer}
-
+[Rendered with [Polygon Mesh Processing Library](http://pmp-library.org)]{.footer}
 
 
 # 3D-Modelle
 
-![Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren](data/amo.off){ width=800px height=500px }
+![](data/amo.off){ width=400px height=400px .print }
+![](data/bunny.off){ width=400px height=400px controls=1 .print }
 
-[[Polygon Mesh Processing Library](http://pmp-library.org)]{.footer}
+[Rendered with [Polygon Mesh Processing Library](http://pmp-library.org)]{.footer}
 
 
 
@@ -479,7 +491,7 @@ Caption: Marc Latoschik, Uni Würzburg
 
 # Interaktive Demos in Javascript
 
-![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ width=1000px height=500px .print css:border="2px solid red" }
+![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ width=1000px height=500px .print }
 
 
 # Interaktive Demos mit [D3.js](https://d3js.org/)
@@ -584,24 +596,8 @@ abline(lm(y ~ x)) # plot the regression line
 :::
 
 
-<!-- # JupyterLite 1
-
-![](demos/jupyterlite/index.html){ .iframe width=1000px height=500px }
-
-
-# JupyterLite 2
-
-![](demos/jupyterlite/repl/index.html?kernel=python){ .iframe width=1000px height=500px } -->
-
-
-<!-- # Shader-Programmierung
-
-![Press `Ctrl-Enter` or `Cmd-Enter` to compile shaders](demos/webgl-shader/alpha-map.html){ width=1200px height=500px  } -->
-
-
 
 # Quizzes und Selbstlernphase
-
 
 
 
