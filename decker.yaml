@@ -1,5 +1,4 @@
 resource-pack: exe:tudo
-
 lang: de
 
 reveal:
@@ -19,6 +18,12 @@ explain:
   camHeight: 720
   useGreenScreen: true
   greenScreenBackground: 'data/background.jpg'
+
+whisper:
+  lang: de
+
+whiteboard:
+  autotoggle: true
 
 math:
   scale: 1.0
@@ -43,7 +48,6 @@ feedback:
   base-url: 'https://decker.cs.tu-dortmund.de/feedback'
 
 polling:
-  # server: 'wss://tramberend.bht-berlin.de/quizzer/quiz'
   server: 'wss://decker.cs.tu-dortmund.de/quizzer/quiz' 
   selection: "Random"
 
@@ -54,9 +58,6 @@ link-citations: true
 publish:
   rsync:
     destination: botsch@zelos.cs.tu-dortmund.de:/srv/www/downloads/elearning/slides/
-    options:
-      - '--delete'
-      - '--delete-excluded'
 
 static-resources:
   - data

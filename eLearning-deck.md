@@ -1,10 +1,10 @@
 ---
-title:        Probieren hilft beim Studieren
+title:        Probieren hilft beim Studieren!
 subtitle:     Interaktive Vorlesungsfolien im Webbrowser
 author:       Prof. Dr. Mario Botsch
 affiliation:  Lehrstuhl für Computergraphik, TU Dortmund
 feedback:
-  deck-id:  'mb-elearning-example'
+  deck-id:  'mbotsch-elearning-example'
 ...
 
 
@@ -54,9 +54,9 @@ Speaker Notes, hurra!
 
 ::: columns-50-50
 
-![Bilder lassen sich einfach einbinden](data/arcarde.png){ height=400px }
+![Bilder lassen sich einfach einbinden](data/arcarde.png "Bild von einem alten Spielautomaten"){ height=400px }
 
-![Videos lassen sich genauso einfach einbinden](data/donkeykong.mp4){ height=400px .controls .autoplay .muted }
+![Videos lassen sich genauso einfach einbinden](data/donkeykong.mp4 "Video von Donkey Kong"){ height=400px .controls .autoplay .muted }
 
 :::
 
@@ -182,6 +182,10 @@ Speaker Notes, hurra!
   (siehe nächste Folie)
 :::
 
+::: notes
+MathJax in Speaker-Notes:
+$$\grad \cdot \vec{u} = 0$$
+:::
 
 # Virtuelle Tafel
 
@@ -229,7 +233,7 @@ for i in range(1, 100):
 Caption: Irgendwas in Python
 
 
-``` {.cpp .line-numbers }
+``` {.cpp .numberLines startFrom="97" }
 int     i, N=100000000;
 double  x, dx=1.0/(double)N;
 double  f, pi=0.0;
@@ -468,18 +472,16 @@ Caption: Marc Latoschik, Uni Würzburg
 
 # 3D-Modelle
 
-![Caption: Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren](data/amo.off){ width=800px height=500px .print }
+![Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren](data/amo.off){ width=800px height=500px .print }
 
 [Rendered with [Polygon Mesh Processing Library](http://pmp-library.org)]{.footer}
 
 
-# 3D-Modelle
+# Noch mehr 3D-Modelle
 
-![](data/amo.off){ width=400px height=400px .print }
-![](data/bunny.off){ width=400px height=400px controls=1 .print }
+![](data/RobotExpressive.glb){ width=1000px height=500px autoplay=1 shadow=1 }
 
-[Rendered with [Polygon Mesh Processing Library](http://pmp-library.org)]{.footer}
-
+[Rendered with [model-viewer](https://modelviewer.dev/), model from [here](https://github.com/google/model-viewer)]{.footer}
 
 
 --------------------------------------------------------------------------------
@@ -598,7 +600,6 @@ abline(lm(y ~ x)) # plot the regression line
 
 
 # Quizzes und Selbstlernphase
-
 
 
 # Audience Response System 
