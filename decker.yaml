@@ -1,26 +1,21 @@
+title:        Probieren hilft beim Studieren!
+subtitle:     Interaktive Vorlesungsfolien im Webbrowser
+author:       Prof. Dr. Mario Botsch
+affiliation:  Lehrstuhl für Computergraphik, TU Dortmund
+
+# resource-pack: exe:nwburg
+# resource-pack: exe:mario
+# resource-pack: exe:mono
 resource-pack: exe:tudo
+
 lang: de
 
 reveal:
-  width: 1280
-  height: 720
-  checkOverflow: false
   center: true
 
-template:
-  deck:
-    css: style.css
-
 explain:
-  recWidth: 1920
-  recHeight: 1080
-  camWidth: 1280
-  camHeight: 720
   useGreenScreen: true
   greenScreenBackground: 'data/background.jpg'
-
-whisper:
-  lang: de
 
 whiteboard:
   autotoggle: true
@@ -47,13 +42,13 @@ math:
 feedback:
   base-url: 'https://decker.cs.tu-dortmund.de/feedback'
 
-polling:
-  server: 'wss://decker.cs.tu-dortmund.de/quizzer/quiz' 
-  selection: "Random"
-
 bibliography: bibliography.bib
 csl: chicago-author-date.csl
 link-citations: true
+
+whisper:
+  model: /opt/whisper/ggml-large-v3.bin
+  lang: de
 
 publish:
   rsync:

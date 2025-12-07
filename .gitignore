@@ -5,3 +5,4 @@ dist
 fit.log
 *-recording.*
 *-times.json
+.rendered-code

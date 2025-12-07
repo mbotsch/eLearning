@@ -11,7 +11,7 @@ feedback:
 # Anleitung für die HTML-Folien
 
 ::: small
-- **Cursor-links**/**Cursor-rechts** blättern durch Folien.
+- [**Cursor-links**/**Cursor-rechts** blättern durch Folien.]{.outline}
 - **f**/**ESC** schalten Fullscreen-Modus an/aus.
 - **Ctrl/Cmd-f** öffnet Such-Dialog, **ESC** schließt ihn wieder.
 - <i class="fas fa-bars"></i> (links oben) öffnet das Navigationsmenü.
@@ -50,6 +50,7 @@ Speaker Notes, hurra!
 
 --------------------------------------------------------------------------------
 
+
 # Bilder und Videos
 
 ::: columns-50-50
@@ -59,16 +60,6 @@ Speaker Notes, hurra!
 ![Videos lassen sich genauso einfach einbinden](data/donkeykong.mp4 "Video von Donkey Kong"){ height=400px .controls .autoplay .muted }
 
 :::
-
-
-# ![](data/laserMario1.jpg){} {.sub}
-
-[Hier ist ein Bild im Fullscreen-Modus als Sub-Slide]{.bubble}
-
-
-# ![](data/donkeykong.mp4){ .muted } {.sub}
-
-[Hier ist ein Video im Fullscreen-Modus als Sub-Slide]{.bubble}
 
 
 # Aufzählungen
@@ -163,6 +154,7 @@ Speaker Notes, hurra!
 
 :::
 
+
 # Mathe-Formeln mit [MathJax](https://www.mathjax.org/)
 
 ::: incremental
@@ -186,6 +178,7 @@ Speaker Notes, hurra!
 MathJax in Speaker-Notes:
 $$\grad \cdot \vec{u} = 0$$
 :::
+
 
 # Virtuelle Tafel
 
@@ -211,7 +204,6 @@ $$\grad \cdot \vec{u} = 0$$
 ::: footer
 Hier der Link auf Navier-Stokes-Gleichungen: $\eqref{eq:momentum}$.
 :::
-
 
 
 # Source Code
@@ -257,21 +249,20 @@ Inline-Code: `for (int i=0; i<100; ++i) sum += i;`{.cpp} Das ist toll!
 
 # Webseiten
 
-![](https://ls7-gv.cs.tu-dortmund.de/){ width=1000px height=550px .print .iframe }
-
+![](https://cg.cs.tu-dortmund.de/){ width=1000px height=500px .print .iframe }
 
 
 # Tabellen
 
-|                     | Powerpoint | LaTeX-Beamer | HTML-Folien |
-|---------------------|:----------:|:------------:|:-----------:|
-| plattformunabhängig |     😢     |      😊      |      😊     |
-| Mathe-Formelsatz    |     😢     |      😊      |      😊     |
-| Videos              |     😊     |      😢      |      😊     |
-| Export für Studierende |     😢     |      😢      |      😍     |
-| erweiterbar         |     😢     |      😢      |      😍     |
-| interaktiv          |     😢     |      😢      |      😍     |
-| Aufwand             |     😊     |      😢      |      😭     |
+|                        | Powerpoint | LaTeX-Beamer | HTML-Folien |
+| ---------------------- | :--------: | :----------: | :---------: |
+| plattformunabhängig    |    😢     |     😊      |     😊     |
+| Mathe-Formelsatz       |    😢     |     😊      |     😊     |
+| Videos                 |    😊     |     😢      |     😊     |
+| Export für Studierende |    😢     |     😢      |     😍     |
+| erweiterbar            |    😢     |     😢      |     😍     |
+| interaktiv             |    😢     |     😢      |     😍     |
+| Aufwand                |    😊     |     😢      |     😭     |
 
 Table: Warum sind HTML-Folien so toll?
 
@@ -301,7 +292,6 @@ Table: Warum sind HTML-Folien so toll?
 
 ![](eLearning.pdf){ width=600px height=500px }
 :::
-
 
 
 --------------------------------------------------------------------------------
@@ -353,10 +343,9 @@ Sparse Cholesky, 0.21, 0.52, 0.83, 1.21, 1.54
 ```
 
 
-
 # Graph-Diagramme mit [GraphViz](https://www.graphviz.org/)
 
-``` {.dot .render height=500px }
+``` {.dot .render height=500px}
 digraph {
     node [style = filled]
     A [fillcolor = red]
@@ -370,7 +359,6 @@ digraph {
     B -> D
 }
 ```
-
 
 
 # Diagramme mit Tikz/Latex
@@ -436,8 +424,6 @@ digraph {
 ```
 
 
-
-
 # Plots mit [gnuplot](http://www.gnuplot.info/)
 
 ``` {.gnuplot .render height=500px }
@@ -498,7 +484,7 @@ Caption: Marc Latoschik, Uni Würzburg
 
 # Interaktive Demos mit [D3.js](https://d3js.org/)
 
-![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ width=1000px height=500px .print }
+![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ width=1000px height=500px }
 
 
 # Komplexere Demos in C++
@@ -513,7 +499,7 @@ Caption: Marc Latoschik, Uni Würzburg
 
 # Interaktive Mathe mit SAGE
 
-::: { .sageCell .print width=1200px height=500px }
+::: { .sageCell .print width=1200px height=500px .print }
 
 Wir definieren ein paar Punkte $\mathbf{x}_1, \dots, \mathbf{x}_6$ und verbinden sie zu einem Linienzug:
 
@@ -598,18 +584,20 @@ abline(lm(y ~ x)) # plot the regression line
 :::
 
 
+--------------------------------------------------------------------------------
 
 # Quizzes und Selbstlernphase
+
+--------------------------------------------------------------------------------
 
 
 # Audience Response System 
 
-::: center
+::: quizzer-choice
 Wer bekommt am Ende die Prinzessin?
 ![](data/peach.png){height=70px}
-:::
 
-::: {.quiz .w80}
+::: w70
 - [ ] Donkey Kong ![](data/donkeykong.png){height=70px}
     - Nein, der ist böse!
 - [ ] Sponge Bob ![](data/spongebob.png){height=70px}
@@ -619,70 +607,64 @@ Wer bekommt am Ende die Prinzessin?
 - [X] Supermario ![](data/supermario.png){height=70px} 
     - Klar!
 :::
-
-
-
-# Zuordnungsaufgaben
-
-::: quiz-mi
-Prinzessin
-: ![](data/peach.png){height=100px}
-
-Donkey Kong
-: ![](data/donkeykong.png){height=100px}
-
-Supermario
-: ![](data/supermario.png){height=100px}
 :::
 
 
 # Zuordnungsaufgaben
 
-::: quiz-mi
-Laplace
-: $\laplace f$
-
-Gradient
-: $\grad f$
-
-Divergenz
-: $\grad \cdot f$ 
-
-Quatsch
-: $\laplace \cdot f$ 
+::: quizzer-assignment
+- ![](data/peach.png){height=100px}
+  - Prinzessin
+- ![](data/donkeykong.png){height=100px}
+  - Donkey Kong
+- ![](data/supermario.png){height=100px}
+  - Supermario
 :::
 
+
+# Zuordnungsaufgaben
+
+::: quizzer-assignment
+- $\laplace f$
+  - Laplace
+- $\grad f$
+  - Gradient
+- $\grad \cdot f$ 
+  - Divergenz
+- $\laplace \cdot f$ 
+  - Quatsch
+:::
 
 
 # Freitextaufgaben
 
-::: columns-50-50
-
-:::: {.center .quiz-ft}
 ![](data/peach.png){height=150px}
-[:vspace](30px)
+
+::: quizzer-ft
 Wie heißt die Prinzessin?
 
 - [x] Peach
+- [x] peach
 - [ ] Lilifee
-::::
+:::
 
-:::: {.center .quiz-ic}
+
+# Selektionsaufgaben
+
 ![](data/donkeykong.png){height=150px}
 [:hspace](30px)
 ![](data/supermario.png){height=150px}
 [:hspace](30px)
 ![](data/spongebob.png){height=130px}\
 [:vspace](40px)
+
+::: quizzer-selection
 Die Prinzessin ist verliebt in 
 
 - [ ] Donkey Kong
 - [x] Supermario
 - [ ] Sponge Bob
-::::
-
 :::
-
 
 
 # Fragensammlung
@@ -704,7 +686,6 @@ Die Prinzessin ist verliebt in
 # Von Markdown zu HTML
 
 ![](data/pipeline.svg){ .embed width=90% }
-
 
 
 # Open-Source "Zutatenliste"
