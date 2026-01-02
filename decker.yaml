@@ -8,6 +8,12 @@ affiliation:  Lehrstuhl für Computergraphik, TU Dortmund
 # resource-pack: exe:mono
 resource-pack: exe:tudo
 
+template:
+  deck:
+    css: style.css
+  index:
+    css: style.css
+
 lang: de
 
 reveal:
@@ -21,6 +27,7 @@ whiteboard:
   autotoggle: true
 
 math:
+  font: tex
   scale: 1.0
   macros:
     R: '{\mathbb{R}}'

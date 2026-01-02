@@ -363,7 +363,7 @@ digraph {
 
 # Diagramme mit Tikz/Latex
 
-``` {.tex .render width=500px}
+``` {.tex .render height=500px}
 \documentclass{standalone}
 \usepackage{tikz}
 \usepackage{verbatim}
@@ -458,16 +458,14 @@ Caption: Marc Latoschik, Uni Würzburg
 
 # 3D-Modelle
 
-![Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren](data/amo.off){ width=800px height=500px .print }
+![Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren. Rendered with [Polygon Mesh Processing Library](http://pmp-library.org)](data/amo.off){ .stretch }
 
-[Rendered with [Polygon Mesh Processing Library](http://pmp-library.org)]{.footer}
 
 
 # Noch mehr 3D-Modelle
 
-![](data/RobotExpressive.glb){ width=1000px height=500px autoplay=1 shadow=1 }
+![Rendered with [model-viewer](https://modelviewer.dev/), model from [here](https://github.com/google/model-viewer)](data/RobotExpressive.glb){ .stretch autoplay=1 shadow=1 }
 
-[Rendered with [model-viewer](https://modelviewer.dev/), model from [here](https://github.com/google/model-viewer)]{.footer}
 
 
 --------------------------------------------------------------------------------
@@ -479,17 +477,17 @@ Caption: Marc Latoschik, Uni Würzburg
 
 # Interaktive Demos in Javascript
 
-![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ width=1000px height=500px .print }
+![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ .stretch .print }
 
 
 # Interaktive Demos mit [D3.js](https://d3js.org/)
 
-![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ width=1000px height=500px }
+![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ .stretch }
 
 
 # Komplexere Demos in C++
 
-![Rechte Maustaste: Flüssigkeit injizieren. Linke Maustaste: Verwirbeln](demos/fluids/fluids.html){ width=1000px height=500px  }
+![Rechte Maustaste: Flüssigkeit injizieren. Linke Maustaste: Verwirbeln](demos/fluids/fluids.html){ .stretch  }
 
 
 # Interaktive Mathe mit Geogebra
@@ -499,7 +497,7 @@ Caption: Marc Latoschik, Uni Würzburg
 
 # Interaktive Mathe mit SAGE
 
-::: { .sageCell .print width=1200px height=500px .print }
+::: { .sageCell width=1200px height=500px .print }
 
 Wir definieren ein paar Punkte $\mathbf{x}_1, \dots, \mathbf{x}_6$ und verbinden sie zu einem Linienzug:
 
@@ -565,7 +563,7 @@ plt.show()
 
 # Interaktive Statistik mit R
 
-::: { .sageCell width=1200px height=500px  .print }
+::: { .sageCell width=1200px height=500px .print }
 Die Trainingsdaten bestehen aus Alter und Maximalpuls als $x$- und $y$-Koordinaten.
 
 ``` rr
@@ -640,30 +638,32 @@ Wer bekommt am Ende die Prinzessin?
 
 ![](data/peach.png){height=150px}
 
+[:vspace](1em)
+
 ::: quizzer-ft
 Wie heißt die Prinzessin?
 
 - [x] Peach
-- [x] peach
-- [ ] Lilifee
 :::
 
 
 # Selektionsaufgaben
 
-![](data/donkeykong.png){height=150px}
-[:hspace](30px)
-![](data/supermario.png){height=150px}
-[:hspace](30px)
-![](data/spongebob.png){height=130px}\
-[:vspace](40px)
+| ![](data/donkeykong.png){height=150px}
+| ![](data/supermario.png){height=150px}
+| ![](data/spongebob.png){height=130px}
+
+[:vspace](1em)
 
 ::: quizzer-selection
 Die Prinzessin ist verliebt in 
 
 - [ ] Donkey Kong
+  - Nein, der ist böse!
 - [x] Supermario
+  - Genau!
 - [ ] Sponge Bob
+  - Nein, der lebt unter Wasser!
 :::
 
 
@@ -691,7 +691,6 @@ Die Prinzessin ist verliebt in
 # Open-Source "Zutatenliste"
 
 ::: w90
-
 - [Reveal.js](https://github.com/hakimel/reveal.js/)
     - Javascript-Framework zur Darstellung von Folien im Webbrowser
 - [Pandoc](https://pandoc.org/)
