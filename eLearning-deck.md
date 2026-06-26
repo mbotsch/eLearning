@@ -62,6 +62,11 @@ Speaker Notes, hurra!
 :::
 
 
+# Youtube Videos
+
+![](youtube:HeQX2HjkcNo){ height=500px }
+
+
 # Aufzählungen
 
 ::: columns-40-50
@@ -225,7 +230,7 @@ for i in range(1, 100):
 Caption: Irgendwas in Python
 
 
-``` {.cpp .numberLines startFrom="97" }
+``` {.cpp .numberLines startFrom="97" line-numbers="1-3" }
 int     i, N=100000000;
 double  x, dx=1.0/(double)N;
 double  f, pi=0.0;
@@ -308,6 +313,14 @@ Table: Warum sind HTML-Folien so toll?
 ![](data/laserMario3.jpg){ height=500px .fragment }
 ![](data/laserMario2.jpg){ height=500px .fragment }
 ![](data/laserMario1.jpg){ height=500px .fragment }
+:::
+
+
+# Bild-Vergleiche
+
+::: image-compare
+![](data/laserMario4.jpg){ height=500px }
+![](data/laserMario3.jpg){ height=500px }
 :::
 
 
@@ -458,13 +471,13 @@ Caption: Marc Latoschik, Uni Würzburg
 
 # 3D-Modelle
 
-![Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren. Rendered with [Polygon Mesh Processing Library](http://pmp-library.org)](data/amo.off){ .stretch }
+![Space-Taste: Zeichenmodus ändern. Linke Maus: Rotieren. Rendered with [Polygon Mesh Processing Library](http://pmp-library.org)](data/amo.off){ width=1000px height=500px }
 
 
 
 # Noch mehr 3D-Modelle
 
-![Rendered with [model-viewer](https://modelviewer.dev/), model from [here](https://github.com/google/model-viewer)](data/RobotExpressive.glb){ .stretch autoplay=1 shadow=1 }
+![Rendered with [model-viewer](https://modelviewer.dev/), model from [here](https://github.com/google/model-viewer)](data/RobotExpressive.glb){ width=1000px height=500px autoplay=1 shadow=1 }
 
 
 
@@ -477,17 +490,17 @@ Caption: Marc Latoschik, Uni Würzburg
 
 # Interaktive Demos in Javascript
 
-![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ .stretch .print }
+![de Casteljau Algorithmus: Kontrollpunkte verschieben, Parameter t verändern](demos/bezier/deCasteljau.html){ width=1000px height=500px .print }
 
 
 # Interaktive Demos mit [D3.js](https://d3js.org/)
 
-![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ .stretch }
+![Voronoi-Diagramm (Punkte mit Maus verschieben)](demos/voronoi/voronoi.html){ width=1000px height=500px }
 
 
 # Komplexere Demos in C++
 
-![Rechte Maustaste: Flüssigkeit injizieren. Linke Maustaste: Verwirbeln](demos/fluids/fluids.html){ .stretch  }
+![Rechte Maustaste: Flüssigkeit injizieren. Linke Maustaste: Verwirbeln](demos/fluids/fluids.html){ width=1000px height=500px  }
 
 
 # Interaktive Mathe mit Geogebra
