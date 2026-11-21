@@ -58,7 +58,7 @@ quizzer:
     start: "default"
     loop: "default"
     end: "default"
-    volume: 0.2
+    volume: 0.1
 
 bibliography: bibliography.bib
 csl: chicago-author-date.csl

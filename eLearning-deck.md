@@ -712,8 +712,8 @@ Die Prinzessin ist verliebt in
     - `decker` basiert auf `pandoc` und übersetzt Markdown in HTML-Folien.
     - Es erweitert `pandoc` und `reveal.js` um zusätzliche Filter und Plugins.
     - Wird entwickelt von 
-      [Prof. Henrik Tramberend](https://tramberend.beuth-hochschule.de/) (Beuth Hochschule Berlin),
-      [Prof. Mario Botsch](https://graphics.uni-bielefeld.de/people/botsch_mario/botsch_mario.html) (TU Dortmund) und
+      [Prof. Henrik Tramberend](https://tramberend.bht-berlin.de/) (BHT Berlin),
+      [Prof. Mario Botsch](https://cg.cs.tu-dortmund.de/people/botsch_mario.html) (TU Dortmund) und
       [Prof. Marc Latoschik & Team](http://hci.uni-wuerzburg.de/people/marc/) (Uni Würzburg).
-    - Wird verwendet an Uni Würzburg, Beuth Hochschule Berlin, TU Dortmund, Uni Osnabrück, Uni Magdeburg, Uni Bern und EPFL.
+    - Wird verwendet an Uni Würzburg, BHT Berlin, TU Dortmund, RWTH Aachen, Uni Paderborn, Uni Magdeburg, Uni Bern, EPFL, ...
 :::
